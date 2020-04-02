@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+    <table class="waehrung">
+        <form method="GET" class="waehrung">
+            <tr>
+                <td>
+                    <label id="waehrung">Währung:</label>
+                </td>
+                <td>
+                    <input type="text" name="waehrung">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="schritte">Schritte:</label>
+                </td>
+                <td>
+                    <input type="text" name="schritte">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit" value="Währung umrechnen">
+                </td>
+            </tr>
+        </form>
+    </table>
+
+    <div class="waehrung">
+        <table border="1">
+            <th>Schritte</th>
+            <th>Umrechnungswert</th>
+            {% for key in waehrungsListe %}
+                <tr>
+                    <td>
+                        {{key}}
+                    </td>
+                    <td>
+                        {{waehrungsListe[key]}}
+                    </td>
+                </tr>
+            {%endfor%}
+
+        </table>
+    </div>
+
+{% endblock %}
