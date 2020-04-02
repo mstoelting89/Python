@@ -9,3 +9,5 @@ b = tkinter.Button(main, text = "Ende", command = ende)
 b.pack()
 
 main.mainloop()
+
+print("Testausgabe fuer PyCharm und Git")
