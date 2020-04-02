@@ -11,3 +11,4 @@ b.pack()
 main.mainloop()
 
 print("Testausgabe fuer PyCharm und Git")
+print("Nächste Testausgabe")
