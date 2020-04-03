@@ -1,5 +1,5 @@
 from selenium import webdriver
 
-driver = webdriver.Chrome('C:\Users\mstoelting\Desktop\Python\Selenium mit Python\chromedriver.exe')
+driver = webdriver.Chrome()
 
 driver.get('https://www.google.de/')
