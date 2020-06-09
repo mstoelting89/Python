@@ -4,8 +4,10 @@
 import pyodbc
 
 conn = pyodbc.connect(
-            r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};'
+            r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
             r'DBQ=C:\Users\mstoelting\Documents\Programmierung\Python\Testkundenanlagetool\database\testDatenbank.accdb;')
+
+connection = pyodbc.connect(conn)
 
 #class DatabaseConnection():
 
