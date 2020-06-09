@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Testkundenanlagetool.iml" filepath="$PROJECT_DIR$/.idea/Testkundenanlagetool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../VakanzenGrabberPython/.idea/VakanzenGrabberPython.iml" filepath="$PROJECT_DIR$/../VakanzenGrabberPython/.idea/VakanzenGrabberPython.iml" />
     </modules>
   </component>
 </project>

@@ -1,17 +1,19 @@
-####################################################################
-#Verbindung zur Datenbank wird hergestellt
 #####################################################################
-import pyodbc
+#
+# Klasse zum Laden der Daten aus einer csv datei
+#
+#####################################################################
+import numpy as np
+import pandas as pd
 
-conn = pyodbc.connect(
-            r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-            r'DBQ=C:\Users\mstoelting\Documents\Programmierung\Python\Testkundenanlagetool\database\testDatenbank.accdb;')
 
-connection = pyodbc.connect(conn)
 
-#class DatabaseConnection():
+class implementCSV():
+    ############################################################
+    # Constructor zum Laden der Übergebenen CSV
+    ############################################################
+    def __init__(self,filename):
+        data = pd.read_csv(filename)
+        print(data)
 
-#    def __init__(self):
-#        conn = pyodbc.connect(
-#            r'Driver={Microsoft Access Driver (*.mbd, *.accdb)};'
-#            r'DBQ=testDatenbank.accdb;')
+csv_lesen = implementCSV('Personenarten.csv')
