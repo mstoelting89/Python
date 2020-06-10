@@ -1,0 +1,117 @@
+Geschäftsvorfall Kontakt (nat. Person) anlegen
+Dieser Geschäftsvorfall beschreibt die Aktionen zur Anlage eines Partner
+Unitop-9
+
+
+---!> Im folgenden wird die Maske zur Anlage von Partnern geöffnet
+---!> Test der funktion Warten auf Element
+Steuerung;Warten_auf_Element;xpath;//div[@id='sideNavBox'];Appear
+Steuerung;Element_Klicken;xpath;//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte'];
+Steuerung;Element_Klicken;xpath;//div[@id='Ribbon']//ul[@class='ms-cui-tts']//span[text() = 'Start'];
+Steuerung;Element_Klicken;link_text;;Neu
+
+---!> Im folgenden werden die Felder der Registerkarte 'Allgemein' gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//span[@class='ms-nav-columns-caption' and text() = 'Allgemein']/../..;Ausklappen
+Steuerung;Wartezeit_Timeout_Setzen;;;2
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[1]//button[text()='Mehr anzeigen'];;Optional
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+Steuerung;Element_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[1]//button[text()='Weniger anzeigen'];Weniger anzeigen
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1];
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//div[@class='task-dialog-content-alignbox']//div[@class='edit-container ms-nav-enumeration']/select/option[@title='[@@PersonenTyp@@]'];
+Steuerung;Element_prüfen;xpath;//div[@id='contentBox']//div[@class='task-dialog-content-alignbox']//div[@class='edit-container ms-nav-enumeration']/select;[@@PersonenTyp@@]
+Steuerung;Element_Klicken;xpath;//*[@id='contentBox']//button[@title='OK'];
+Steuerung;Wartezeit_Timeout_Setzen;;;2
+Steuerung;Warten_auf_Element;xpath;//*[@id='contentBox']//button[@title='OK'];Gone
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1];[RETURN]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1];[@@Name@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1];[RETURN]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Titel (vor Nachname)']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Titel (vor Nachname)@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Titel']/..//input[1];[@@Titel@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Titel (nach Nachname)']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Titel (nach Nachname)@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Art']/..//select;[@@Art@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Unternehmensname']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Unternehmensname@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Suchbegriff']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Suchbegriff@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Anredecode']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Anredecode@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Nicht segmentieren']/..//input;[@@Nicht segmentieren@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Datenschutzsperre']/..//input;[@@Datenschutzsperre@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Minderjährig']/..//input;[@@Minderjährig@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Kundenart']/..//select;[@@Kundenart@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input;[@@Portalkunde@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zusätzlich Postversand']/..//input;[@@Zusätzlich Postversand@@]
+
+---!> Im folgenden werden die Felder der Registerkarte 'Kommunikation' gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//span[@class='ms-nav-columns-caption' and text() = 'Kommunikation']/../..;Ausklappen
+Steuerung;Wartezeit_Timeout_Setzen;;;2
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[2]//button[text()='Mehr anzeigen'];;Optional
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+Steuerung;Element_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[2]//button[text()='Weniger anzeigen'];Weniger anzeigen
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Straße']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Straße@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Hausnr.']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Hausnr.@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Hausnr. Zusatz']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Hausnr. Zusatz@@]
+Steuerung;Element_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Adresse 2']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Straße@@] [@@Hausnr.@@][@@Hausnr. Zusatz@@]
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'PLZ-Code']/..//input[2];
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']/div/div[1]/div[2]/div[1]/div/div[2]/a[1];
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']/div/div[1]/div[2]/div[1]/div/div[2]/div[1]/input;[@@PLZ-Code@@]
+Steuerung;Element_Klicken;xpath;//form[@id='aspnetForm']//div[@class='ms-nav-listform']//table[contains(@id,'BusinessGrid')]//a[contains(@title,'[@@PLZ-Code@@]')];[@@PLZ-Code@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Bundesland']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Bundesland@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Telefonnr.']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Telefon@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner Telefon']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Ansprechpartner Telefon@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Telefon 2']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Telefon 2@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner Telefon 2']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Ansprechpartner Telefon 2@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'E-Mail']/..//input[@class='cursorinherit stringcontrol-edit'];[@@E-Mail@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner E-Mail']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Ansprechpartner E-Mail@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Faxnr.']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Faxnr.@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Homepage']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Homepage@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Korrespondenzart']/..//select[@class='enumerationcontrol-edit'];[@@Korrespondenzart@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sprachcode']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Sprachcode@@]
+
+---!> Im folgenden werden die Felder der Registerkarte 'Person' gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//span[@class='ms-nav-columns-caption' and text() = 'Person']/../..;Ausklappen
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Familienstand']/..//select[@class='enumerationcontrol-edit'];[@@Familienstand@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Kinder vorhanden']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Kinder vorhanden@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Kirchensteuer']/..//select[@class='enumerationcontrol-edit'];[@@Kirchensteuer@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Mindestlohn 2']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Mindestlohn 2@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Arbeitszeitguthaben vorhanden']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Arbeitszeitguthaben vorhanden@@]
+Steuerung;Schalter_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Arbeitszeitguthaben vorhanden']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Arbeitszeitguthaben vorhanden@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//div[@class='ms-nav-band expanded']//a[text() = 'TZR-Vertrag vorhanden']/..//input[@class='cursorinherit booleancontrol-edit'];[@@TZR-Vertrag vorhanden@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//div[@class='ms-nav-band expanded']//a[text() = 'TZR-Plus-Vertrag vorhanden']/..//input[@class='cursorinherit booleancontrol-edit'];[@@TZR-Plus-Vertrag vorhanden@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Soka-Mitarbeiter']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Soka-Mitarbeiter@@]
+
+---!> Im folgenden werden die Felder der Registerkarte 'RV-Nummern' gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//span[@class='ms-nav-columns-caption' and text() = 'RV-Nummern']/../..;Ausklappen
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'RVNR']/..//input[@class='cursorinherit stringcontrol-edit'];[@@RVNR@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'RVNR 2']/..//input[@class='cursorinherit stringcontrol-edit'];[@@RVNR 2@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'RVNR 3']/..//input[@class='cursorinherit stringcontrol-edit'];[@@RVNR 3@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'RVNR 77']/..//input[@class='cursorinherit stringcontrol-edit'];[@@RVNR 77@@]
+
+---!> Im folgenden werden die Felder der Registerkarte 'Übergreifende Information' gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//span[@class='ms-nav-columns-caption' and text() = 'Übergreifende Information']/../..;Ausklappen
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Mitglied']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Mitglied@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Versorgungsempfänger']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Versorgungsempfänger@@]
+Steuerung;Schalter_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Versorgungsausgleichsberechtigter']/..//input[@class='cursorinherit booleancontrol-edit'];[@@Versorgungsausgleichsberechtigter@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Geburtsdatum']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker'];[@@Geburtsdatum@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Geburtsdatum Einw. Meldeamt']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Geburtsdatum Einw. Meldeamt@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Geschlecht']/..//select[@class='enumerationcontrol-edit'];[@@Geschlecht@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Rentenbeginn']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker'];[@@Rentenbeginn@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Geburtsname']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Geburtsname@@]
+Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Geburtsort']/..//input[@class='cursorinherit stringcontrol-edit'];[@@Geburtsort@@]
+
+---!> auskommentiert - aufgrund von Problemen beim setzen auf der GUI
+---!> Steuerung;Element_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'RBM Identifikationsnummer']/..//input[@class='cursorinherit stringcontrol-edit'];[@@RBM Identifikationsnummer@@]
+
+---!> Kontaktnummer in Variable speichern
+Steuerung;Variable_setzen;xpath;//div[@class='content-area-box']//h1[@class='pagetitle-control'];[var:Partner Titel:]
+Steuerung;Testvariable_bearbeiten;Substring_entfernen; ∙ [@@Name@@];[var:Partner Titel:];[var:Kontaktnr:]
+---!> Im folgenden wird die Bearbeitung beendet und der Partner geschlossen
+Steuerung;Element_Klicken;xpath;//div[@id='ribbon-container']//span[@class='ms-cui-ctl-largelabel' and text() = 'Bearbeiten' and not(@aria-hidden)];
+---!> Verringert die Wartezeit 
+Steuerung;Wartezeit_Timeout_Setzen;;;5
+---!> Mit dem Zusatz 'Optional' am Ende der Aktion führt die nicht vorhandene Meldung zur Dublettenprüfung nicht zu Testlaufabbruch
+Steuerung;Element_Klicken;xpath;//*[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='OK'];;Optional
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox'][@class='ms-nav-worksheet']//div[@title='Seite speichern und schließen'];;Optional
+---!> Je nach Ergebnis der Dublettenprüfung öffnet sich eine unterschiedliche Maske
+Steuerung;Element_Klicken;xpath;//div[@class='dialog-system-actions']/div[@title='Seite speichern und schließen'];;Optional
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='Nein'];;Optional
+---!> Setzt die Wartezeit wieder auf den Standardwert
+Steuerung;Wartezeit_Timeout_Setzen;;;Default

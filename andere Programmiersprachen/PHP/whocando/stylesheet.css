@@ -1,0 +1,764 @@
+/* ------------------------- */
+/* CSS Code for landing page */
+/* ------------------------- */
+
+html {
+	scroll-behavior:smooth;
+}
+
+body {
+	margin:0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay {
+	background-color:rgb(0,0,0,.6);
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+
+/* Navigation Bar */
+
+.navbar {
+	height: 40px;
+	background-color:#FBFBEF;
+}
+
+.navbar button {
+	background-color:#FBFBEF;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:5px;
+	border:0px;
+}
+
+.navbar a,
+.navbar a:visited,
+.navbar a:active {
+	text-decoration: none;
+	color:black;
+}
+
+.profilLogin {
+	float:right;
+	margin-right:20px;
+}
+
+.profilName {
+	margin-top:10px;
+	margin-bottom:5px;
+	float:right;
+	cursor:pointer;
+}
+
+.profilMenu {
+	position:absolute;
+	background-color: #FBFBEF;
+	top:40px;
+	right:0px;
+	display:none;
+}
+
+.profilMenu button {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	margin-top:5px;
+	width:100%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	background-color:#F38333;
+	color:white;
+	padding-bottom:5px;
+	height: 30px;
+}
+
+.profilMenu a,
+.profilMenu a:visited,
+.profilMenu a:active {
+	text-decoration: none;
+	color:white;
+}
+
+.profilLogin img {
+	width:35px;
+	height:35px;
+	border-radius:50%;
+	margin-right:10px;
+	margin-top:3px;
+} 
+
+.loginField {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	margin-top:5px;
+	margin-right:20px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	background-color:#F38333;
+	color:white;
+	padding-bottom:5px;
+	cursor:pointer;
+}
+
+.loginDetails {
+	display:none;
+}
+
+.loginDetails td {
+	padding-top:10px;
+	padding-left:5px;
+}
+
+.loginForm {
+	position:absolute;
+	background-color: #FBFBEF;
+	top:40px;
+	right:0px;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"]
+ {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height:30px;
+	float:left;
+}
+
+.loginForm label {
+	position:relative;
+	top: -10px;
+	background-color:#FBFBEF;
+	right:150;
+}
+
+.loginForm input[type="submit"],
+.loginForm button {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	margin-top:5px;
+	margin-right:20px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	background-color:#F38333;
+	color:white;
+	padding-bottom:5px;
+	height: 30px;
+}
+
+.loginForm a {
+	text-decoration: none;
+	color:white!important;
+}
+
+/* Header */
+
+.header {
+	background-image: url(https://www.whocando.eu/images/170422_Who_Can_Do_009_header.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:400px;
+	width:100%;
+	padding-top:100px;
+}
+
+/* Header Slider */
+
+#carousel {
+	position: relative;
+	width:60%;
+	margin:0 auto;
+}
+
+#slides {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 250px;
+}
+
+#slides ul {
+	list-style: none;
+	width:100%;
+	height:250px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#slides li {
+	width:100%;
+	height:250px;
+	float:left;
+	text-align: center;
+	position: relative;
+	font-family:lato, sans-serif;
+}
+/* Styling for prev and next buttons */
+.btn-bar{
+    max-width: 346px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 40px;
+    width: 100%;
+}
+
+ #buttons {
+	padding:0 0 5px 0;
+	float:right;
+}
+
+#buttons a {
+	text-align:center;
+	display:block;
+	font-size:50px;
+	float:left;
+	outline:0;
+	margin:0 60px;
+	color:#b14943;
+	text-decoration:none;
+	display:block;
+	padding:9px;
+	width:35px;
+}
+
+	a#prev:hover, a#next:hover {
+	color:#FFF;
+	text-shadow:.5px 0px #b14943;  
+}
+
+.quote-phrase {
+	font-family:sans-serif;
+	display: table-cell;
+	vertical-align: middle;
+	font-family:'Lato', Calibri, Arial, sans-serif;
+	font-size:24px;
+	color:#FFF;
+	text-shadow:.5px 0px #b14943;  
+}
+
+.quote-phrase span{
+	font-size:24px;
+	color:#FFF;
+	text-shadow:.5px 0px #b14943;  
+	background-color:rgb(0,0,0,.6);
+}
+
+
+.quoteContainer, .authorContainer {
+	display: table;
+	margin:auto;
+	font-size:24px;
+	color:#FFF;
+	text-shadow:.5px 0px #b14943;  
+	background-color:rgb(0,0,0,.6);
+	margin-bottom:5px;
+	padding: 10px 30px 10px 30px;
+	width:50%;
+}
+
+.headerText {
+	background-color:rgb(0,0,0,.6);
+	font-size:30px;
+	font-weight:bold;
+	color:white;
+	margin:auto;
+	text-align:center;
+	width:30%;
+	margin-bottom:20px;
+}
+
+/* Search Section */
+
+.search {
+	background-color:#F38333;
+	color:white;
+	padding-top:5px;
+}
+
+.searchForm {
+	margin-left:40%;
+	margin-right:25%;
+	background-color:#F38333;
+	margin-bottom:0px;
+	padding-bottom:30px;
+}
+
+.searchForm label {
+	position:relative;
+	margin-left:20px;
+	padding-left:5px;
+	padding-right:5px;
+	top:10px;
+	background-color:#F38333;
+	color:white;
+}
+
+.searchForm input[type="text"],
+.searchForm input[type="date"],
+.searchForm input[type="datetime"],
+.searchForm input[type="email"],
+.searchForm input[type="number"],
+.searchForm input[type="search"],
+.searchForm input[type="time"],
+.searchForm input[type="url"],
+.searchForm input[type="password"],
+.searchForm textarea,
+.searchForm select 
+{
+	max-width:250px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	outline: none;
+	display:block;
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height: 40px;
+	line-height: 35px;
+	font-size: 16px;
+	padding-left:5px;
+	background-color:#F38333;
+	color:white;
+}
+
+.searchForm input[type="submit"] {
+	max-width:125px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	outline: none;
+	display:block;
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height: 40px;
+	line-height: 35px;
+	margin-left:65px;
+	margin-top:20px;
+	font-size: 16px;
+	padding-left:5px;
+	background-color:#F38333;
+	color:white;
+}
+
+/* Information Section */
+
+.infoSection {
+	overflow:hidden;
+	background-color:#FBFBEF;
+	padding-top:30px;
+}
+
+.infoBox {
+	width:35%;
+	margin-left:10%;
+	position:relative;
+	float:left;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.infoHeader img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.infoText {
+	text-align:justify;
+	line-height:1.5;
+}
+
+.infoText h3 {
+	text-align:center;
+}
+
+/* Login Section */
+
+.loginSection {
+	background-size:cover;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-image: url(images/170422_Who_Can_Do_020_background.jpg);
+	height:500px;
+}
+
+.login {
+	margin-left:35%;
+}
+
+.login button {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	margin-top:200px;
+	margin-right:20px;
+	padding-left:75px;
+	padding-right:75px;
+	padding-top:5px;
+	background-color:#F38333;
+	color:white;
+	padding-bottom:5px;
+	height: 75px;
+	font-size:18px;
+	cursor:pointer;
+}
+
+.middleLoginForm {
+	display:none;
+}
+
+.middleLoginForm input[type="text"],
+.middleLoginForm input[type="password"]
+ {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height:30px;
+	display:block;
+}
+
+.middleLoginForm label {
+	position:relative;
+}
+
+.middleLoginForm input[type="submit"],
+.middleLoginForm button {
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	margin-top:5px;
+	margin-right:20px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	background-color:#F38333;
+	color:white;
+	padding-bottom:5px;
+	height: 30px;
+}
+
+.loginSection a {
+	text-decoration: none;
+	color:white!important;
+}
+
+/* Explanation Section */
+
+.explanationSection {
+	padding-left:10%;
+	padding-right:10%;
+	padding-top:5%;
+	padding-bottom:15%;
+	background-color:#FBFBEF;
+	overflow:hidden;
+}
+
+.explanationSection h3 {
+	text-align:center;
+}
+
+.explanationText {
+	overflow:hidden;
+	text-align:justify;
+	line-height:1.5;
+}
+
+.explanationImage {
+	overflow:hidden;
+	text-align:center;
+}
+
+.explanationLeft {
+	clear:left;
+	float:left;
+	width:50%;
+	overflow:hidden;
+	height:200px;
+}
+
+.explanationLeft img {
+	width:50%;
+	overflow:hidden;
+}
+
+.explanationRight {
+	overflow:hidden;
+	width:50%;
+	height:200px;
+	text-align:justify;
+	line-height:1.5;
+}
+
+.explanationRight img {
+	width:50%;
+	overflow:hidden;
+}
+
+.explanationSection tr {
+	
+}
+
+/* About Us Section */
+
+.aboutSection {
+	padding-left:10%;
+	padding-right:10%;
+	margin-top:-10%;
+	padding-bottom:5%;
+	transform: skewY(-4deg);
+	background-color: #F38333;
+}
+
+.schraegAufheben {
+	transform: skewY(4deg);
+	padding-top:5%;
+}
+
+.aboutSectionText {
+	float:left;
+	width:45%;
+	margin-right:10%;
+	text-align:justify;
+	line-height:1.5;
+}
+
+/* Footer */
+
+.footer {
+	background-color:#252c2f;
+	color: white;
+	text-align:center;
+	margin-top:-5%;
+	padding-top:10%;
+	padding-bottom:5%;
+}
+
+/* ------------------------- */
+/* CSS Code for profile page */
+/* ------------------------- */
+
+.headerProfil {
+	background-image: url(images/170422_Who_Can_Do_009_header.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:300px;
+    width:100%;
+    overflow:hidden;
+}
+
+.headerProfilDetails img {
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	margin-left:1%;
+	margin-top:50px;
+}
+
+.headerProfilDetails span {
+	font-size:50px;
+	font-weight:bold;
+	top:-60px;
+	color:white;
+	position:relative;
+	margin-left:20px;
+}
+
+.mainFrame {
+	background-color:#F38333;
+	color:white;
+	overflow:hidden;
+	padding-top:30px;
+}
+
+.sidebar {
+	position:relative;
+	height:100%;
+	width:150px;
+	background-color:#F38333;
+	margin-left:10%;
+	float:left;
+}
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:active {
+	text-decoration: none;
+	color:black;
+	font-weight:bold;
+	font-size:14px;
+}
+
+.sidebar button {
+	width:150px;
+	background-color:#FBFBEF;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
+	margin-left:6px;
+	border-left:1px solid black;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	border-right:5px solid #FBFBEF;
+	border-radius:5px;
+}
+
+.content {
+	overflow:hidden;
+	background-color:#FBFBEF;
+	border:1px solid black;
+	margin-right:10%;
+	padding-top:10px;
+	border-radius:5px;
+	padding-left:10px;
+	margin-bottom:10%;
+	min-height:400px;
+	color:black;
+}
+
+
+.content input[type="submit"],
+.btnUpload {
+	max-width:125px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	outline: none;
+	display:block;
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height: 40px;
+	line-height: 35px;
+	font-size: 16px;
+	padding-left:5px;
+	background-color:#F38333;
+	color:white;
+}
+
+.profileInfo {
+	position:relative;
+	float:left;
+}
+
+.profilePictureDetails img {
+    margin-right: 10px;
+}
+
+.overlayPicture {
+	border-radius:50%;
+	overflow:hidden;
+	width:150px;
+	height:150px;
+}
+
+.profilePicTable {
+	float:right;
+	margin-right:100px;
+}
+/* ------------------------------ */
+/* CSS Code for registration page */
+/* ------------------------------ */
+
+.mainFrameRegister {
+	background-color:#F38333;
+	color:white;
+	padding-bottom:100px;
+}
+
+.registerForm label {
+	position:relative;
+	top:8px;
+	left:10px;
+	background-color:#F38333;
+}
+
+.registerForm h1,
+.registerForm h3 {
+	text-align:center;
+}
+
+.registerForm form {
+	margin-left:40%;
+}
+ 
+.registerForm input[type="text"],
+.registerForm input[type="date"],
+.registerForm input[type="datetime"],
+.registerForm input[type="email"],
+.registerForm input[type="number"],
+.registerForm input[type="search"],
+.registerForm input[type="time"],
+.registerForm input[type="url"],
+.registerForm input[type="password"],
+.registerForm textarea,
+.registerForm select {
+	max-width:250px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	outline: none;
+	display:block;
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height: 40px;
+	line-height: 35px;
+	font-size: 16px;
+	padding-left:5px;
+	background-color:#F38333;
+	color:white;
+}
+
+.registerForm input[type="submit"],
+.registerForm input[type="reset"] {
+	max-width:125px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	outline: none;
+	display:block;
+	border-radius: 5px;
+	border:1px solid #DDDDDD;
+	height: 40px;
+	line-height: 35px;
+	margin-left:65px;
+	margin-top:20px;
+	font-size: 16px;
+	padding-left:5px;
+	background-color:#F38333;
+	color:white;
+}
+
+/* ------------------------ */
+/* CSS Code for search page */
+/* ------------------------ */
+
+.headerSearch {
+	background-image: url(images/170422_Who_Can_Do_009_header.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:300px;
+    width:100%;
+    overflow:hidden;
+}
+
+.headerSearchDetails span {
+	font-size:50px;
+	font-weight:bold;
+	top:-60px;
+	color:white;
+	position:relative;
+	margin-left:20px;
+}

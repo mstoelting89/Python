@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Config>
+	<Allgemein> 
+		<GeVoPfad>F:/Tests/GeVos/</GeVoPfad> <!-- Ablageort der GeVo Dateien (Pfad MUSS mit "/" enden)-->
+		<TestlistenOrdner>F:/Tests/Testlisten/</TestlistenOrdner> <!-- Ablageort der Testlisten Dateien (Pfad MUSS mit "/" enden)-->
+		<Kopfzeilen>5</Kopfzeilen> <!-- Anzahl der Kopfzeilen in GeVo und Testfall Dateien (Wert muss ganzzahlig und größer 0 sein) -->
+		<MaximaleWartezeit>20</MaximaleWartezeit> <!-- Anzahl der Wartezeit bis Timeout (Wert muss ganzzahlig und größer 0 sein) -->
+		<HighlightStyle>background: yellow; border: 2px solid red;</HighlightStyle> <!-- Dient zum Hervorheben von Elementen in Screenshots -->
+		<Jira_Basis_URL>https://jira.lak.local:8443</Jira_Basis_URL> <!-- Dient zur Erstellung von Links zu Akzeptanzkriterien (diese werden an Testfällen/GeVos in der Form "Unitop-9" angegeben) -->
+		<Übersicht_Ersetzen>1</Übersicht_Ersetzen> <!-- Dient zur Steuerung, ob eine Übersichtsdatei überschrieben oder mittels Index hochgezählt werden soll sobald bereits eine Übersicht am Ablageort vohanden ist -->
+		<Testdaten> <!-- Dient zur Identifizierung von Testdaten -->
+			<Identifier_Anfang>[@@</Identifier_Anfang>  <!-- Identifier am Testdatum der am Anfang eines Platzhalters steht -->
+			<Identifier_Ende>@@]</Identifier_Ende> <!-- Identifier am Testdatum der am Ende eines Platzhalters steht -->
+		</Testdaten>
+		<Testvariablen> <!-- Dient zur Identifizierung von Testvariablen -->
+			<Identifier_Anfang>[var:</Identifier_Anfang>  <!-- Identifier an der Testvariablen der am Anfang eines Platzhalters steht -->
+			<Identifier_Ende>:]</Identifier_Ende> <!-- Identifier an der Testvariablen der am Ende eines Platzhalters steht -->
+		</Testvariablen>
+	</Allgemein>
+	<Browser>
+		<Chrome>E:/Testautomatisierung/Browser/Chrome/GoogleChromePortable.exe</Chrome> <!-- Ablageort zur Chome-Browser Exe -->
+		<Firefox>E:/Testautomatisierung/Browser/Firefox/App/Firefox64/Firefox.exe</Firefox> <!-- Ablageort zur Firefox-Browser Exe -->
+	</Browser>
+	<Webdriver>
+		<Chrome>E:/Testautomatisierung/Browser/Chrome/chromedriver.exe</Chrome> <!-- Ablageort zur Chome-Webdriver Exe -->
+		<Firefox>E:/Testautomatisierung/Browser/Firefox/geckodriver.exe</Firefox> <!-- Ablageort zur Firefox-Webdriver Exe -->
+	</Webdriver>
+</Config>

@@ -1,0 +1,9 @@
+Kontakt (nat. Person) anlegen und pseudo RVNR ermitteln
+Dieser Testfall führt die Anlage eines Partner auf Basis von hinterlegten Testdaten durch, nach erfolgreicher Anlage wird der Partner gesucht und über die PartnerAnsicht wieder gelöscht
+Unitop-XX
+
+
+GeVo;/Kontakt_anlegen/nat_Person_anlegen_minimal;;;
+GeVo;Kontakt_suchen_und_öffnen;;;
+GeVo;/Pseudo_Nummern/pseudo_RVNR_ermitteln;;;
+GeVo;/Pseudo_Nummern/pseudo_RVNR_prüfen;;;

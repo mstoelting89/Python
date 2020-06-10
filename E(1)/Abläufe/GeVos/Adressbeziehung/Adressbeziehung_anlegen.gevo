@@ -1,0 +1,48 @@
+GeVp Adressbeziehung anlegen
+Dieser GeVo beschreibt die Aktionen zum anlegen einer Adressbeziehung von einem geöffneten Partner zu einem Partner aus den Testdaten
+
+
+
+---!> Ansicht Adressbeziehungen öffnen
+Steuerung;Element_Klicken;xpath;//div[@id='Ribbon']//ul[@class='ms-cui-tts']//span[text() = 'Navigate' and not(@aria-hidden)];
+Steuerung;Element_Klicken;xpath;//div[@id='Ribbon' and not(@aria-hidden)]//span[text() = 'Adressbeziehungen'];
+Steuerung;Element_Klicken;xpath;//div[@class='ms-cui-smenu-inner' and not(@aria-hidden)]//span[text() = 'Zu Adresse' and not(@aria-hidden)][1]/../..;
+Steuerung;Warten_auf_Element;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)];Appear
+Steuerung;Element_enthält_Wert_prüfen;xpath;//h2[not(@aria-hidden)];BEARBEITEN - ADRESSBEZIEHUNGEN - [var:Kontaktnr:]
+---!> Neue Adressbeziehung anlegen
+Steuerung;Element_Klicken;xpath;//div[@class='wrap-content'  and not(@aria-hidden)]//a[text() = 'Neu'];
+---!> Prüfen das in der Zeile, in der die Werte gesetzt werden bisher keine Funktion gesetzt wurde
+Steuerung;Element_prüfen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[6]/input;
+---!> Adressbeziehung setzen
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[6]/input;[@@Funktion@@]
+---!> Prüfen, ob für die gewählte Adressbeziehung eine Fehlermeldung angezeigt wird
+Steuerung;Wartezeit_Timeout_Setzen;;;5
+Steuerung;Warten_auf_Element;xpath;//div[@id='validationPane' and not(@aria-hidden)]//img[@class='ms-nav-validationmessage-error'];Gone
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+---!> Weitere Eingaben für die Adressbeziehung
+Steuerung;Element_prüfen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[7]/a;[@@Funktionsbeschreibung@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[8]/input;[@@zugeordnete Nr.@@]
+Steuerung;Element_prüfen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[9]/a;[@@Name@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[10]/input;[@@Telefonnr.@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[11]/input;[@@Fax@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[12]/input;[@@E-Mail@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[13]/input;[@@Telefonnr. Dienstlich@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[14]/input;[@@Abteilung@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[15]/input[1];[@@von Datum@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[16]/input[1];[@@bis Datum@@]
+---!>Steuerung;Element_prüfen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[17]/a;[@@Status@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[18]/input[1];[@@Ausbildung geplant@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[19]/input[1];[@@Prüfungsdatum@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[20]/input;[@@Prüfung bestanden@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[21]/input[1];[@@Abbruchdatum@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[22]/input[1];[@@Lehrberuf@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[23]/input;[@@Umschüler@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[24]/input;[@@Ausb. Vertr. Vorhanden@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[25]/input;[@@Kostenübernahme ABV@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[26]/input;[@@Kostenübernahme IT/AT@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[27]/input[1];[@@Ausbildungsverlängerung bis@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[28]/input;[@@Beschäftigungsnummer@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[29]/input;[@@Postempfänger@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[30]/input;[@@Vermögensvorsorge@@]
+Steuerung;Element_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[31]/select;[@@Adressart@@]
+Steuerung;Schalter_setzen;xpath;//table[@class='ms-nav-grid ms-nav-grid-edit ms-nav-grid-header-hide' and not(@aria-hidden)]//tr[1]/td[32]/input;[@@Adresse ist inaktiv@@]

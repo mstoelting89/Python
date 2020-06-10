@@ -1,0 +1,50 @@
+Geschäftsvorfall Kontakt (nat. Person) anlegen (minimal)
+Dieser Geschäftsvorfall beschreibt die Aktionen zur Anlage eines Partner mit der minimalen Angabe von Attributen
+Unitop-XX
+
+
+---!> Im folgenden wird die Maske zur Anlage von Partnern geöffnet
+---!> Test der funktion Warten auf Element
+Steuerung;Warten_auf_Element;xpath;//div[@id="sideNavBox"];Appear
+Steuerung;Element_Klicken;xpath;//div[@id="sideNavBox"]//ul[@class="ms-nav-navpane-navarea-navgroup"]//a[@title="Kontakte"];
+Steuerung;Element_Klicken;xpath;//div[@id="Ribbon"]//ul[@class="ms-cui-tts"]//span[text() = 'Start'];
+Steuerung;Element_Klicken;link_text;;Neu
+
+---!> Im folgenden werden die Felder der Registerkarte "Allgemein" gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1];Ausklappen
+Steuerung;Wartezeit_Timeout_Setzen;;;2
+Steuerung;Element_Klicken;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//button[text()="Mehr anzeigen"];;Optional
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+Steuerung;Element_prüfen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//button[text()="Weniger anzeigen"];Weniger anzeigen
+Steuerung;Element_Klicken;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//div[@class="multiple-columns-group"]/div[5]//input[@class="cursorinherit stringcontrol-edit"];
+Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="task-dialog-content-alignbox"]//div[@class="edit-container ms-nav-enumeration"]/select;[@@PersonenTyp@@]
+Steuerung;Element_Klicken;xpath;//*[@id="contentBox"]//button[@title="OK"];
+Steuerung;Wartezeit_Timeout_Setzen;;;2
+Steuerung;Warten_auf_Element;xpath;//*[@id="contentBox"]//button[@title="OK"];Gone
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//div[@class="multiple-columns-group"]/div[5]//input[@class="cursorinherit stringcontrol-edit"];[RETURN]
+Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//div[@class="multiple-columns-group"]/div[5]//input[@class="cursorinherit stringcontrol-edit"];[@@Name@@]
+Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//div[@class="multiple-columns-group"]/div[5]//input[@class="cursorinherit stringcontrol-edit"];[RETURN]
+Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[1]//div[@class="multiple-columns-group"]/div[13]//select;[@@Art@@]
+
+---!> Im folgenden werden die Felder der Registerkarte "Übergreifende Informationen" gefüllt
+Steuerung;Element_ein_ausklappen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[9];Ausklappen
+Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[9]//div[@class="multiple-columns-group"]/div[11]//input[@class="cursorinherit stringcontrol-edit hasDatepicker"];[@@Geburtsdatum@@]
+
+---!> auskommentiert - aufgrund von Problemen beim setzen auf der GUI
+---!> Steuerung;Element_setzen;xpath;//div[@id="contentBox"]//div[@class="ms-nav-scrollable"]/div[1]/div[9]//div[@class="multiple-columns-group"]/div[@class="ms-nav-group"]/div[2]/div[3]//input[@class="cursorinherit stringcontrol-edit"];[@@RBM Identifikationsnummer@@]
+
+---!> Kontaktnummer in Variable speichern
+Steuerung;Variable_setzen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[9]//div[@class='multiple-columns-group']/div[1]//span;[var:Kontaktnr:]
+---!> Im folgenden wird die Bearbeitung beendet und der Partner geschlossen
+Steuerung;Element_Klicken;xpath;/html/body/div[1]/div[4]/form/div[1]/div[1]/div/div[2]/ul/li[2]/span[1]/span[1]/span/span[1]/span/a;
+---!> Verringert die Wartezeit 
+Steuerung;Wartezeit_Timeout_Setzen;;;5
+---!> Mit dem Zusatz "Optional" am Ende der Aktion führt die nicht vorhandene Meldung zur Dublettenprüfung nicht zu Testlaufabbruch
+Steuerung;Element_Klicken;xpath;//*[@id="contentBox"][@class="message-dialog two_columns_title"]//button[@title="OK"];;Optional
+Steuerung;Element_Klicken;xpath;//div[@id="contentBox"][@class="ms-nav-worksheet"]//div[@title="Seite speichern und schließen"];;Optional
+---!> Je nach Ergebnis der Dublettenprüfung öffnet sich eine unterschiedliche Maske
+Steuerung;Element_Klicken;xpath;//div[@class="dialog-system-actions"]/div[@title="Seite speichern und schließen"];;Optional
+Steuerung;Element_Klicken;xpath;//div[@id="contentBox"][@class="message-dialog two_columns_title"]//button[@title="Nein"];;Optional
+---!> Setzt die Wartezeit wieder auf den Standardwert
+Steuerung;Wartezeit_Timeout_Setzen;;;Default

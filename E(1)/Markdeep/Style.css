@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:800i');
+
+body {
+    position: absolute;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    left: 200px;
+    right: 0px;
+    margin: 0;
+	margin-top: -15px;
+    padding: 0;
+    max-width: none;
+    color: #555;
+    font-size: 15px;
+    padding-right: 20px;
+    overflow-x: hidden;
+    text-overflow: ellipses;
+}
+.md span.zitat {
+    font-size: 105%;
+    color: #777;
+    font-style: italic;
+}
+.md blockquote.zitat {
+    text-align: left;
+    line-height: 160%;
+}
+.md blockquote.author {
+    text-align: right;
+    line-height: 160%;
+}
+.md blockquote {
+	margin: auto;
+    width: 50%;
+}
+.md span.zitat::before {
+    content: "“";
+    color: #DDD;
+    font-family: Times New Roman;
+    font-size: 32px;
+    line-height: 0;
+    margin-right: 6px;
+    vertical-align: -0.2em;
+}
+
+.md span.zitat::after {
+    content: "”";
+    font-style: normal;
+    color: #DDD;
+    font-family: Times New Roman;
+    font-size: 32px;
+    line-height: 32px;
+    margin-left: 6px;
+    vertical-align: -0.2em;
+}
+
+.md span.author::before {
+    content: "by → ";
+}
+.md span.author {
+	float: right;
+    font-style: italic;
+	margin-top: 10px;
+	padding-right: 20px;
+    color: #5b5b5b;
+    font-family: Times New Roman;
+    font-size: 20px;
+    line-height: 110%;
+    margin-right: 6px;
+    vertical-align: -0.3em;
+	text-shadow: 2px 4px #e6e6e6;
+}
+
+.md .longTOC , .shortTOC{
+    width: 170px;
+	display: inline-grid;
+    grid-template-rows: minmax(10px, 20px)
+    grid-gap: 10px;
+    border-right: 3px solid #2C6197;
+    overflow-y: auto;
+    font-size: 15px;
+    font-family: inherit;
+    background: #FFF;
+    
+    position: absolute;
+    top: 90px;
+    left:-190px;
+    bottom:0px;
+    margin: 0px;
+    padding: 0px;
+	text-align: left;
+    background-color: rgba(44,97,151,0.1);
+}
+.level1{
+    color: #fff;
+	border-top: 1px solid #2C6197;
+	border-bottom: 1px solid #2C6197;
+}
+.level2{
+	padding-left: 10px;
+}
+.level2:before {
+    content:"• ";
+}
+.level3{
+	padding-left: 20px;
+}
+.level3:before {
+    content:"- ";
+}
+.TocTop {
+    color: #fff;
+	float: right;
+}
+.shortTOC a{
+	min-width: 170px;
+	height:30px;
+	
+}
+.scrolled .md .longTOC, .shortTOC {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    border-left: 10px solid #fff; 
+}
+
+
+/* no numbering of headings */
+.md h1:before, .md h2:before, .md h3:before, .md h4:before, .md h5:before, .md h6:before { /*content: none;*/ }
+
+.md .longTOC a {
+    color: #000;
+}
+
+.md .tocHeader, .md .tocNumber {
+    display: none;
+}
+
+.md a,
+.md div.title, contents, .md .tocHeader,
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6,
+.md .nonumberh1, .md .nonumberh2, .md .nonumberh3, .md .nonumberh4, .md .nonumberh5, .md .nonumberh6,
+.md .shortTOC, .md .mediumTOC, .md .longTOC {
+    font-family: inherit;
+}
+
+
+.md div.title, .md h1, .md h2, .md h3, .md h4 {
+    font-family: 'Raleway', Arial;
+    font-weight: 800;
+}
+
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+    color: #2C6197;
+    border-color: inherit;
+}
+
+.md h2, .md h3, .md h4 {
+	padding-left: 20px;
+}
+
+.md .tocTop {
+    display: inline;
+}
+
+.md div.title, .md div.subtitle {
+    position: relative;
+    right: 0px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0px 0px 3px #2C6197;
+    background-color: #2C6197;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    color: #fff;
+    font-size: 18px;
+    z-index: 10;
+}
+.md div.subtitle {
+	top: -15px;
+}
+.md div.title {
+    position: relative;
+	width: auto;
+    right: 0px;
+    font-weight: 900;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 0px 0px 3px #2C6197;
+    background-color: #2C6197;
+    background-image: url('SokaLogo.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 130px;
+    color: #fff;
+    font-size: 45px;
+    z-index: 10;
+}
+
+.md div.afterTitles {
+    height: 90px;
+}
+
+.md table.table th{
+    background-color: #2C6197;
+}
+.md table.table tr:nth-child(even){
+    background-color: rgba(44,97,151,0.3);
+	color: black;
+}
+.md table.table tr:nth-child(odd){
+    background-color: rgba(44,97,151,0.5);
+	color: black;
+}
+.md pre.tilde{
+	border-top: 1px solid #2C6197;
+	border-bottom: 1px solid #2C6197;
+    background-color: rgba(44,97,151,0.1);
+	width: auto;
+}
+.md pre.listing .linenumbers span.line::before {
+    width: 35px;
+    margin-left: -28px;
+    font-size: 90%;
+    text-align: right;
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    padding-right: 13px;
+    margin-right: 8px;
+    color: rgba(44,97,151,0.8);
+}
+.TimeStamp {
+	text-align: right;
+	font-size: 12px;
+    font-weight: 800;
+	margin-bottom: -20px;
+	margin-top: -15px;
+	padding-bottom: -20px;
+	padding-top: -15px;
+}
+.md img {
+	width: 248px;
+	padding: 2px;
+	border-style: solid;
+}

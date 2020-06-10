@@ -1,0 +1,7 @@
+Kontakt (Sonstige juristische Person) anlegen und löschen
+Dieser Testfall führt die Anlage eines Partner auf Basis von hinterlegten Testdaten durch, nach erfolgreicher Anlage wird der Partner gesucht und über die PartnerAnsicht wieder gelöscht
+Unitop-XX
+
+
+GeVo;/Kontakt_anlegen/sonst_jur_Person_anlegen;;;
+GeVo;Kontakt_suchen_und_löschen;;;

@@ -1,0 +1,7 @@
+Kontakt (Betrieb) anlegen und löschen
+Dieser Testfall führt die Anlage eines Partner auf Basis von hinterlegten Testdaten durch, nach erfolgreicher Anlage wird der Partner gesucht und über die PartnerAnsicht wieder gelöscht
+Unitop-11;Unitop-12
+
+
+GeVo;/Kontakt_anlegen/Betrieb_anlegen;;;
+GeVo;Kontakt_suchen_und_löschen;;;

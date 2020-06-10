@@ -1,0 +1,8 @@
+Pseudo RVNR prüfen
+Diese Schritte prüfen für einen bereits geöffneten Kontakt eine zuvor von Unitop ermittelte RVNR gegen einen erwarteten Wert
+Unitop-XX
+
+
+---!> Im folgenden wird die pseudo RVNR geprüft
+Steuerung;element_enthält_wert_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'RVNR']/..//input;[@@Pseudo-BKN@@]
+

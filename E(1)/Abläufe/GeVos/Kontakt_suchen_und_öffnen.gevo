@@ -1,0 +1,22 @@
+Gevo Kontakt suchen und öffnen
+Dieser GeVo beschreibt die Aktionen Suchen und öffnen eines Partners auf Basis eine vorab ermittelteten Kontaktnummer. Vor der Löschung wird geprüft ob der gewünschte Partner geöffnet wurde
+Unitop-9
+
+
+---!> Kontakte öffnen
+Steuerung;Element_Klicken;xpath;//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte'];;Optional
+---!>Steuerung;Element_prüfen;xpath;/html/body/div[1]/div[2]/form/div[4]/div[2]/div[1]/div[1]/div[1]/h1;Kontakte
+---!> Ansicht auf eine Tabelle umstellen (sofern nicht bereits umgestellt)
+Steuerung;Element_Klicken;xpath;//div[@class='list-layout-chooser']//a[@title='Als Übersicht anzeigen'];;Optional
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+---!> Suche starten
+Steuerung;Element_Klicken;xpath;//div[@class='content-header-actions']//a[@title='Suchen'];
+---!> Anzahl der Suchergebnisse speichern (zum warten bis Suchergebnis angezeigt wird)
+Steuerung;Variable_setzen;xpath;//div[@class='edit-container right ms-nav-editcontrol-nocaption']/span[@class='stringcontrol-read'];[var:Anzahl Suchergebnisse:]
+Steuerung;Element_setzen;xpath;//div[@class='content-header-actions']//input[@class='cursorinherit stringcontrol-edit'];@[var:Kontaktnr:]
+---!> Es wird gewartet, bis die Anzahl der Suchergebnisse sich verändert hat
+Steuerung;Element_enthält_Wert_nicht;xpath;//div[@class='edit-container right ms-nav-editcontrol-nocaption']/span[@class='stringcontrol-read'];[var:Anzahl Suchergebnisse:]
+---!> Kontaktnummer öffnen und prüfen, ob der gewünschte Partner geöffnet wurde
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//table[contains(@id,'BusinessGrid')]//a[contains(@title,'[var:Kontaktnr:]') and text()='[var:Kontaktnr:]'];[var:Kontaktnr:]
+Steuerung;Warten_auf_Element;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//h1[@class='pagetitle-control'];Appear
+Steuerung;Element_enthält_Wert_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//h1[@class='pagetitle-control'];[var:Kontaktnr:]

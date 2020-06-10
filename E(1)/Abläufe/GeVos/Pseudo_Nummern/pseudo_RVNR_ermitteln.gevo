@@ -1,0 +1,16 @@
+Pseudo RVNR ermitteln
+Diese Schritte ermitteln eine pseudo RVNR für einen bereits geöffneten Kontakt
+Unitop-XX
+
+
+---!> Im folgenden wird die geprüft, ob ein Geburtsdatum eingetragen wurde
+Steuerung;Element_prüfen;xpath;//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Geburtsdatum']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker'];[@@Geburtsdatum@@]
+---!> Im folgenden wird die pseudo RVNR ermittelt
+Steuerung;Warten_auf_Element;xpath;//div[@id='ribbon-container']//span[text() = 'Aktionen' and not(@aria-hidden)]/..;Appear
+Steuerung;Element_Klicken;xpath;//div[@id='ribbon-container']//span[text() = 'Aktionen' and not(@aria-hidden)]/..;
+Steuerung;Element_Klicken;xpath;//div[@id='Ribbon']//span[text() = 'Pseudo-RVNR ermitteln' and not(@aria-hidden)]/..;
+Steuerung;element_enthält_wert_prüfen;xpath;//div[@id='contentBox'][@class='message-dialog two_columns_title']//p[@class='staticstringcontrol'];RVNR
+Steuerung;element_enthält_wert_prüfen;xpath;//div[@id='contentBox'][@class='message-dialog two_columns_title']//p[@class='staticstringcontrol'];[var:Kontaktnr:]
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='Ja'];
+---!> Warten bis die Maske zur bestätigung der Ermittlung nicht mehr angezeigt wird
+Steuerung;Warten_auf_Element;xpath;//div[@id='contentBox'][@class='message-dialog two_columns_title']//p[@class='staticstringcontrol'];Gone

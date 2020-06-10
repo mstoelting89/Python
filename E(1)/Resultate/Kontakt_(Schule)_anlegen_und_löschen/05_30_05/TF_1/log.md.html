@@ -1,0 +1,3790 @@
+<meta lang="de" charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="file:/C:/Users/mstoelting/Documents/Programmierung/Python/E(1)/Markdeep/Style.css?">
+
+<div class = "Title" > Testlaufdurchführungs-Log </div>
+
+<div class = "Subtitle" > Dies ist ein automatisiert generiertes Log </div>
+
+
+# Test Informationen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+ | Feld | Wert |
+ | --- | --- |
+ | Testfall-Name | Kontakt (Schule) anlegen und löschen |
+ | Testfall-Beschreibung | Dieser Testfall führt die Anlage eines Partner auf Basis von hinterlegten Testdaten durch |  nach erfolgreicher Anlage wird der Partner gesucht und über die PartnerAnsicht wieder gelöscht |
+ | Akzeptanzkriterium(**Jira-#**) | [Unitop-11](https://jira.lak.local:8443/browse/Unitop-11) - (Komponente: **Kontaktverwaltung**)<br>[Unitop-12](https://jira.lak.local:8443/browse/Unitop-12) - (Komponente: **Kontaktverwaltung**)<br> |
+ | Testdaten-Datei | [Datei](file:/F:\Tests\Testfälle\Kontaktverwaltung\Schule\Testdaten\Schule_Anlegen_und_löschen.xlsx) |
+
+# Test Ablauf
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+Innerhalb des Testcases werden die folgenden Schritte durchgeführt.
+
+ | Step # | typ | Aktion | Parameter |
+ | --- | --- | --- | --- |
+ | 1 | GeVo | /Kontakt_anlegen/Schule_anlegen |  |
+ | 2 | GeVo | Kontakt_suchen_und_löschen |  |
+
+# Testfall
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+!!! note:Hinweis
+    Testfall Ablauf wird nun gestartet
+
+## Testfall Ablauf wird vorbereitet
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+### Bestehende Prozesse entfernen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+Bereits bestehende Prozesse werden mittels der folgenden Befehle vor Erzeugung einer neuen Webdriver-Instanz entfernt.
+
+!!! note:Hinweis
+    Hier können Fehler angezeigt werden. Diese haben jedoch keinen unmittelbaren Einfluss auf den Testablauf. Das Kommando "TASKKILL" erzeugt eine Fehlerausgabe, sobald der gewünschte Prozesse nicht vorhanden ist
+
+#### Webdriver
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+Der folgende Befehl wurde ausgeführt.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+TASKKILL /f /IM CHROMEDRIVER.EXE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Ausgabe.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+Es wurden keine Ausgabe erzeugt.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Fehler.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python linenumbers
+FEHLER: Der Prozess "CHROMEDRIVER.EXE" wurde nicht gefunden.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#### Browser
+<div class = "TimeStamp" > (22.04.2020 - 05:30:05) </div>
+
+
+Der folgende Befehl wurde ausgeführt.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+TASKKILL /f /IM CHROME.EXE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Ausgabe.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+Es wurden keine Ausgabe erzeugt.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Fehler.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python linenumbers
+FEHLER: Der Prozess "CHROME.EXE" wurde nicht gefunden.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Webdriver erzeugen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:09) </div>
+
+
+Der Webdriver wurde angelegt. Die Testdurchführung wird mit Chrome und folgenden Eigenschaften durchgeführt.
+
+ | Beschreibung | Wert |
+ | --- | --- |
+ | Browser | Chrome |
+ | Browser-Version | 80.0.3987.106 |
+ | Broswer-EXE | E:/Testautomatisierung/Browser/Chrome/GoogleChromePortable.exe |
+ | Webdriver-Version | to be done |
+ | Webdriver-EXE | E:/Testautomatisierung/Browser/Chrome/chromedriver.exe |
+
+## Webseite öffnen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:09) </div>
+
+
+ | Beschreibung | Wert |
+ | --- | --- |
+ | URL | https://navtst.soka-dach.de/DynamicsNAV_TST/ |
+
+
+![Bild - Screenshots/1.png](Screenshots/1.png)
+
+Die URL wurde mit dem Browser geöffnet
+
+## Anmeldung
+<div class = "TimeStamp" > (22.04.2020 - 05:30:14) </div>
+
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Seitentitel | Sign in to your account |
+ | Benutzername | mnaas@soka-dach.de |
+
+Es wird eine Anmeldung durchgeführt
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="e0f058fb-751e-46ae-af3c-f6054643dcf2")>**) wurde mittels dem folgenden (**name**) selektiert.<br>**name** = (**loginfmt**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:338<br>y:290 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | form-control ltr_override |
+ | Typ | email |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/1_e.png](Screenshots/Elements/1_e.png)
+
+Das Element (**loginfmt**) wurde auf den Wert (**mnaas@soka-dach.de**) gesetzt
+
+
+![Bild - Screenshots/2.png](Screenshots/2.png)
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="1cb89e8b-2dd8-4017-9139-ebf2fae4e4c2")>**) wurde mittels dem folgenden (**name**) selektiert.<br>**name** = (**passwd**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:338<br>y:326 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | form-control |
+ | Typ | password |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/2_e.png](Screenshots/Elements/2_e.png)
+
+Das Element (**passwd**) wurde auf den Wert (**start123#**) gesetzt
+
+!!! note:Hinweis
+    Der Style zum markieren innerhalb des Screenshots konnte nicht gesetzt werden
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="ec87698e-0670-4de3-b96e-de9e348e7289")>**) wurde mittels dem folgenden (**id**) selektiert.<br>**id** = (**idSIButton9**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:580<br>y:399 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | Yes |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | btn btn-block btn-primary |
+ | Typ | submit |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/3_e.png](Screenshots/Elements/3_e.png)
+
+Es wurde auf das Element (**idSIButton9**) geklickt
+
+
+![Bild - Screenshots/3.png](Screenshots/3.png)
+
+Es wurde eine neue Benutzeranmeldung durchgeführt
+
+!!! Tip:Erfolgreich
+    Die Anmeldung wurde erfolgreich durchgeführt
+
+## Wechseln zu IFrame
+<div class = "TimeStamp" > (22.04.2020 - 05:30:28) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="55e110e1-ba46-40e7-8731-a30a6ff88e05")>**) wurde mittels dem folgenden (**tag_name**) selektiert.<br>**tag_name** = (**iframe**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:0<br>y:0 |
+ | Tag Name | iframe |
+ | Text |  |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | designer-client-frame |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/4_e.png](Screenshots/Elements/4_e.png)
+
+!!! Tip:Erfolgreich
+    Das Element - **iframe** ist vorhanden.
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="55e110e1-ba46-40e7-8731-a30a6ff88e05")>**) wurde mittels dem folgenden (**tag_name**) selektiert.<br>**tag_name** = (**iframe**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:0<br>y:0 |
+ | Tag Name | iframe |
+ | Text |  |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | designer-client-frame |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/5_e.png](Screenshots/Elements/5_e.png)
+
+Es wurde zu folgendem Element (**iframe**) gewechselt
+
+## GeVo Informationen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:30) </div>
+
+
+ | Feld | Wert |
+ | --- | --- |
+ | GeVo-Name | Geschäftsvorfall Kontakt (Schule) anlegen |
+ | GeVo-Beschreibung | Dieser Geschäftsvorfall beschreibt die Aktionen zur Anlage eines Partners |
+ | Akzeptanzkriterium(**Jira-#**) | Unitop-XX - Jira-Vorgang existiert nicht |
+
+## GeVo Ablauf
+<div class = "TimeStamp" > (22.04.2020 - 05:30:30) </div>
+
+
+Innerhalb des GeVos werden die folgenden Schritte durchgeführt.
+
+ | Step # | typ | Aktion | Parameter |
+ | --- | --- | --- | --- |
+ | 3 | Steuerung | Warten_auf_Element | Appear |
+ | 4 | Steuerung | Element_Klicken |  |
+ | 5 | Steuerung | Element_Klicken |  |
+ | 6 | Steuerung | Element_Klicken | Neu |
+ | 9 | Steuerung | Element_ein_ausklappen | Ausklappen |
+ | 10 | Steuerung | Wartezeit_Timeout_Setzen | 2 |
+ | 11 | Steuerung | Element_Klicken |  |
+ | 12 | Steuerung | Wartezeit_Timeout_Setzen | Default |
+ | 13 | Steuerung | Element_prüfen | Weniger anzeigen |
+ | 14 | Steuerung | Element_Klicken |  |
+ | 15 | Steuerung | Element_Klicken |  |
+ | 16 | Steuerung | Element_prüfen | [@@PersonenTyp@@] |
+ | 17 | Steuerung | Element_Klicken |  |
+ | 19 | Steuerung | Element_setzen | [@@Name@@] |
+ | 20 | Steuerung | Element_setzen | [RETURN] |
+ | 21 | Steuerung | Element_setzen | [@@Juristischer Name@@] |
+ | 22 | Steuerung | Element_setzen | [@@Art@@] |
+ | 23 | Steuerung | Element_setzen | [@@Suchbegriff@@] |
+ | 24 | Steuerung | Element_setzen | [@@Anredecode@@] |
+ | 25 | Steuerung | Schalter_setzen | [@@Nicht segmentieren@@] |
+ | 26 | Steuerung | Schalter_setzen | [@@Datenschutzsperre@@] |
+ | 27 | Steuerung | Schalter_setzen | [@@Minderjährig@@] |
+ | 28 | Steuerung | Element_setzen | [@@Kundenart@@] |
+ | 29 | Steuerung | Schalter_setzen | [@@Portalkunde@@] |
+ | 30 | Steuerung | Schalter_setzen | [@@Zusätzlich Postversand@@] |
+ | 33 | Steuerung | Element_ein_ausklappen | Ausklappen |
+ | 34 | Steuerung | Wartezeit_Timeout_Setzen | 2 |
+ | 35 | Steuerung | Element_Klicken |  |
+ | 36 | Steuerung | Wartezeit_Timeout_Setzen | Default |
+ | 37 | Steuerung | Element_prüfen | Weniger anzeigen |
+ | 38 | Steuerung | Element_setzen | [@@Straße@@] |
+ | 39 | Steuerung | Element_setzen | [@@Hausnr.@@] |
+ | 40 | Steuerung | Element_setzen | [@@Hausnr. Zusatz@@] |
+ | 41 | Steuerung | Element_prüfen | [@@Straße@@] [@@Hausnr.@@][@@Hausnr. Zusatz@@] |
+ | 42 | Steuerung | Element_Klicken |  |
+ | 43 | Steuerung | Element_Klicken |  |
+ | 44 | Steuerung | Element_setzen | [@@PLZ-Code@@] |
+ | 45 | Steuerung | Element_Klicken | [@@PLZ-Code@@] |
+ | 46 | Steuerung | Element_setzen | [@@Bundesland@@] |
+ | 47 | Steuerung | Element_setzen | [@@Telefon@@] |
+ | 48 | Steuerung | Element_setzen | [@@Ansprechpartner Telefon@@] |
+ | 49 | Steuerung | Element_setzen | [@@Telefon 2@@] |
+ | 50 | Steuerung | Element_setzen | [@@Ansprechpartner Telefon 2@@] |
+ | 51 | Steuerung | Element_setzen | [@@E-Mail@@] |
+ | 52 | Steuerung | Element_setzen | [@@Ansprechpartner E-Mail@@] |
+ | 53 | Steuerung | Element_setzen | [@@Faxnr.@@] |
+ | 54 | Steuerung | Element_setzen | [@@Homepage@@] |
+ | 55 | Steuerung | Element_setzen | [@@Korrespondenzart@@] |
+ | 56 | Steuerung | Element_setzen | [@@Sprachcode@@] |
+ | 59 | Steuerung | Element_ein_ausklappen | Ausklappen |
+ | 60 | Steuerung | Element_setzen | [@@Rechtsform@@] |
+ | 61 | Steuerung | Element_setzen | [@@Handelsreg.-Nr.@@] |
+ | 62 | Steuerung | Element_setzen | [@@Handelsregistergericht@@] |
+ | 63 | Steuerung | Element_setzen | [@@Zust. Amtsgericht@@] |
+ | 66 | Steuerung | Element_ein_ausklappen | Ausklappen |
+ | 67 | Steuerung | Element_setzen | [@@Erstmalige Anerkennung am@@] |
+ | 68 | Steuerung | Element_setzen | [@@Letzte Zertifizierung am@@] |
+ | 69 | Steuerung | Element_setzen | [@@Letztes Situationsgespräch am@@] |
+ | 70 | Steuerung | Element_setzen | [@@Sperrung ab@@] |
+ | 71 | Steuerung | Element_setzen | [@@Sperrgrund@@] |
+ | 73 | Steuerung | Element_setzen | [@@Übertragungsart Kostennachweis@@] |
+ | 74 | Steuerung | Schalter_setzen | [@@Zertifizierung@@] |
+ | 78 | Steuerung | Element_ein_ausklappen | Ausklappen |
+ | 79 | Steuerung | Schalter_setzen | [@@Arbeitgeber@@] |
+ | 80 | Steuerung | Schalter_setzen | [@@Versorgungswerk@@] |
+ | 81 | Steuerung | Schalter_setzen | [@@Gericht@@] |
+ | 87 | Steuerung | Variable_setzen | [var:Partner Titel:] |
+ | 88 | Steuerung | Testvariable_bearbeiten | [var:Partner Titel:] |
+ | 90 | Steuerung | Element_Klicken |  |
+ | 92 | Steuerung | Wartezeit_Timeout_Setzen | 5 |
+ | 94 | Steuerung | Element_Klicken |  |
+ | 95 | Steuerung | Element_Klicken |  |
+ | 97 | Steuerung | Element_Klicken |  |
+ | 98 | Steuerung | Element_Klicken |  |
+ | 100 | Steuerung | Wartezeit_Timeout_Setzen | Default |
+
+## GeVo
+<div class = "TimeStamp" > (22.04.2020 - 05:30:30) </div>
+
+
+!!! note:Hinweis
+    GeVo Ablauf wird nun gestartet
+
+### GeVo Ablauf wird vorbereitet
+<div class = "TimeStamp" > (22.04.2020 - 05:30:30) </div>
+
+
+## Warten auf Element
+<div class = "TimeStamp" > (22.04.2020 - 05:30:30) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="7873ce64-d310-4510-afe2-55c07176c686")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='sideNavBox']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:0<br>y:133 |
+ | Tag Name | div |
+ | Text | STARTSEITE
+Kontakte
+Debitoren
+Verträge
+Versorgungsausgleich
+Bankkonten
+Transfer Kontakt
+Versorgungsausgleich
+Rentensimulation |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | nav-area-box |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/6_e.png](Screenshots/Elements/6_e.png)
+
+!!! Tip:Erfolgreich
+    Das Element - **//div[@id='sideNavBox']** ist vorhanden.
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:32) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="023adb73-a13c-4545-9a6c-94cd67ad5f20")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:0<br>y:219 |
+ | Tag Name | a |
+ | Text | Kontakte |
+ | Wert | None |
+ | Titel | Kontakte |
+ | Aria | None |
+ | Klasse | ms-nav-navpane-nochildren |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/7_e.png](Screenshots/Elements/7_e.png)
+
+Es wurde auf das Element (**//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte']**) geklickt
+
+
+![Bild - Screenshots/4.png](Screenshots/4.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:33) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="b57db9e3-6516-4a6e-a269-a3391b54d377")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='Ribbon']//ul[@class='ms-cui-tts']//span[text() = 'Start']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:1<br>y:21 |
+ | Tag Name | span |
+ | Text | START |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-cui-tt-span |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/8_e.png](Screenshots/Elements/8_e.png)
+
+Es wurde auf das Element (**//div[@id='Ribbon']//ul[@class='ms-cui-tts']//span[text() = 'Start']**) geklickt
+
+
+![Bild - Screenshots/5.png](Screenshots/5.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:35) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="dfb2b36c-4bdc-44d7-9e9f-993295814cd7")>**) wurde mittels dem folgenden (**link_text**) selektiert.<br>**link_text** = (**Neu**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:65<br>y:48 |
+ | Tag Name | a |
+ | Text | Neu |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-cui-ctl-medium |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/9_e.png](Screenshots/Elements/9_e.png)
+
+Es wurde auf das Element (**Neu**) geklickt
+
+
+![Bild - Screenshots/6.png](Screenshots/6.png)
+
+## Element ein-/ausgeklappt prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:36) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="b3d1941c-5d79-4f54-9264-df5ffa1ea121")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//span[@class='ms-nav-columns-caption' and text() = 'Allgemein']/../..**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:228 |
+ | Tag Name | div |
+ | Text | Allgemein
+Weniger anzeigen
+Partnertyp
+Partner ID
+Juristischer Name
+Name
+Name 2
+Vorname
+Vorname 2
+Nachname
+Titel
+Titel (vor Nachname)
+Titel (nach Nachname)
+Art
+Unternehmen
+Person
+Unternehmensnr.
+Unternehmensname
+Suchbegriff
+Sachbearbeiter
+Anredecode
+Positionscode
+Nicht segmentieren
+Datenschutzsperre
+Minderjährig
+Zustimmung eines Erziehungsberechtigten erhalten
+Kundenart
+gewerblich
+privat
+Adressbeziehungen zu
+0
+Adressbeziehungen von
+0
+Status
+Debitorennr.
+Kreditor Nr.
+     Portalkunde
+Zusätzlich Postversand |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-nav-band contains-show-mandatory-fields expanded |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/10_e.png](Screenshots/Elements/10_e.png)
+
+
+![Bild - Screenshots/7.png](Screenshots/7.png)
+
+Das Element (**//span[@class='ms-nav-columns-caption' and text() = 'Allgemein']/../..**) mit der Klasse (**ms-nav-band contains-show-mandatory-fields expanded**) und dem Inhalt (**Allgemein
+Weniger anzeigen
+Partnertyp
+Partner ID
+Juristischer Name
+Name
+Name 2
+Vorname
+Vorname 2
+Nachname
+Titel
+Titel (vor Nachname)
+Titel (nach Nachname)
+Art
+Unternehmen
+Person
+Unternehmensnr.
+Unternehmensname
+Suchbegriff
+Sachbearbeiter
+Anredecode
+Positionscode
+Nicht segmentieren
+Datenschutzsperre
+Minderjährig
+Zustimmung eines Erziehungsberechtigten erhalten
+Kundenart
+gewerblich
+privat
+Adressbeziehungen zu
+0
+Adressbeziehungen von
+0
+Status
+Debitorennr.
+Kreditor Nr.
+     Portalkunde
+Zusätzlich Postversand**) entspricht dem erwarteten Wert ausklappen = (**Ausklappen**)
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:38) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *2* sekunden gesetzt
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:38) </div>
+
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:30:41) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[1]//button[text()='Mehr anzeigen']**. Es konnte kein Element identifiziert werden.
+
+!!! ERROR:Fehler beim klicken auf das Elementes
+    Fehler beim Klicken auf das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[1]//button[text()='Mehr anzeigen']**). Das Element wurde nicht gefunden.
+
+!!! WARNING:Warnung
+    Aufgrund des Zusatzes **'Optional'** an der Aktion wurde der Fehler ignoriert. Der Testlauf wird fortgesetzt
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:41) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *20* sekunden gesetzt
+
+## Element prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:41) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | Weniger anzeigen | Weniger anzeigen |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="40a0b5a5-128f-4d20-a4d0-9bfb4d3e9b2b")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[1]//button[text()='Weniger anzeigen']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:535<br>y:234 |
+ | Tag Name | button |
+ | Text | Weniger anzeigen |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | show-more-fields-button |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/11_e.png](Screenshots/Elements/11_e.png)
+
+Es wird geprüft, dass das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[1]//button[text()='Weniger anzeigen']**) exakt dem folgenden Wert entspricht (**Weniger anzeigen**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**Weniger anzeigen**) entspricht dem erwarteten Wert (**Weniger anzeigen**). Es wurde der Elementtext geprüft
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:41) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2a3ee5ba-73b6-4c19-b52f-65ea7bbbf907")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:356 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) AssistEdit öffnen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/12_e.png](Screenshots/Elements/12_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1]**) geklickt
+
+
+![Bild - Screenshots/8.png](Screenshots/8.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:42) </div>
+
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:30:43) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: javascript error: Failed to execute 'elementsFromPoint' on 'Document': The provided double value is non-finite.<br>  (Session info: chrome=80.0.3987.106)<br>
+
+!!! WARNING:Warnung
+    Es konnte nicht mittels switch zum Element gewechselt werden. Die Testdurchführungwird fortgesetzt.
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="49725fb2-ac41-459b-a0fe-e2d327d74e43")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='task-dialog-content-alignbox']//div[@class='edit-container ms-nav-enumeration']/select/option[@title='Schule']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:0<br>y:0 |
+ | Tag Name | option |
+ | Text | Schule |
+ | Wert | 3 |
+ | Titel | Schule |
+ | Aria | None |
+ | Klasse |  |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+Fehler beim erzeugen des Screenshots für das Element
+
+Es wurde auf das Element (**//div[@id='contentBox']//div[@class='task-dialog-content-alignbox']//div[@class='edit-container ms-nav-enumeration']/select/option[@title='Schule']**) geklickt
+
+
+![Bild - Screenshots/9.png](Screenshots/9.png)
+
+## Element prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:43) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@PersonenTyp@@] | Schule |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="a2770d3c-b722-493c-99dd-cdd01ff4ad7c")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='task-dialog-content-alignbox']//div[@class='edit-container ms-nav-enumeration']/select**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:495<br>y:68 |
+ | Tag Name | select |
+ | Text | natürliche Person
+Betrieb
+Schule
+sonstige jur. Person |
+ | Wert | 3 |
+ | Titel | Schule |
+ | Aria | None |
+ | Klasse | enumerationcontrol-edit |
+ | Typ | select-one |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/13_e.png](Screenshots/Elements/13_e.png)
+
+Es wird geprüft, dass das Element (**//div[@id='contentBox']//div[@class='task-dialog-content-alignbox']//div[@class='edit-container ms-nav-enumeration']/select**) exakt dem folgenden Wert entspricht (**Schule**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**Schule**) entspricht dem erwarteten Wert (**Schule**). Es wurde der Elementtitel geprüft
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:30:44) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="7ed3c42a-398d-4e00-9ac9-7c088674c964")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//button[@title='OK']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:590<br>y:351 |
+ | Tag Name | button |
+ | Text | OK |
+ | Wert |  |
+ | Titel | OK |
+ | Aria | None |
+ | Klasse | cursorinherit ms-nav-button highlight-btn |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/14_e.png](Screenshots/Elements/14_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']//button[@title='OK']**) geklickt
+
+
+![Bild - Screenshots/10.png](Screenshots/10.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:45) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Name@@] | Testschule |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2a3ee5ba-73b6-4c19-b52f-65ea7bbbf907")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:356 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) AssistEdit öffnen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/15_e.png](Screenshots/Elements/15_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1]**) wurde auf den Wert (**Testschule**) gesetzt
+
+
+![Bild - Screenshots/11.png](Screenshots/11.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:46) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [RETURN] | [RETURN] |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2a3ee5ba-73b6-4c19-b52f-65ea7bbbf907")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Name']/..//input[1]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:356 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | Testschule |
+ | Titel | (Alt + Nach-unten) AssistEdit öffnen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/16_e.png](Screenshots/Elements/16_e.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:47) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Juristischer Name@@] | Schule |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="d69ccb15-4658-42c0-b2d2-f51fb45499d9")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Juristischer Name']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:324 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/17_e.png](Screenshots/Elements/17_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Juristischer Name']/..//input**) wurde auf den Wert (**Schule**) gesetzt
+
+
+![Bild - Screenshots/12.png](Screenshots/12.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:48) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Art@@] | Unternehmen |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="4ec83cee-7dfb-4ae7-84f9-232f9b577944")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Art']/..//select**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:612 |
+ | Tag Name | select |
+ | Text | Unternehmen
+Person |
+ | Wert | 0 |
+ | Titel | Unternehmen |
+ | Aria | None |
+ | Klasse | enumerationcontrol-edit |
+ | Typ | select-one |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/18_e.png](Screenshots/Elements/18_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Art']/..//select**) wurde auf den Wert (**Unternehmen**) gesetzt
+
+
+![Bild - Screenshots/13.png](Screenshots/13.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:49) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Suchbegriff@@] | 72432 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="141d47a2-e804-49d0-bfb1-1aff55c55781")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Suchbegriff']/..//input[1]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:648 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | TESTSCHULE |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/19_e.png](Screenshots/Elements/19_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Suchbegriff']/..//input[1]**) wurde auf den Wert (**72432**) gesetzt
+
+
+![Bild - Screenshots/14.png](Screenshots/14.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:51) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Anredecode@@] | MANDANT |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="d9aabd16-3042-48a3-8b10-3ba26e7e863f")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Anredecode']/..//input[1]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:232 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | MANDANT |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/20_e.png](Screenshots/Elements/20_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Anredecode']/..//input[1]**) wurde auf den Wert (**MANDANT**) gesetzt
+
+
+![Bild - Screenshots/15.png](Screenshots/15.png)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:52) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Nicht segmentieren@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="dc33af9a-de79-4805-aaad-5fdb009c518b")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Nicht segmentieren']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:296 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/21_e.png](Screenshots/Elements/21_e.png)
+
+
+![Bild - Screenshots/16.png](Screenshots/16.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Nicht segmentieren']/..//input**) entspricht dem erwarteten Wert (Nein)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:53) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Datenschutzsperre@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="08d67549-c802-48ad-8611-d4cedc24c9cf")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Datenschutzsperre']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:328 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/22_e.png](Screenshots/Elements/22_e.png)
+
+
+![Bild - Screenshots/17.png](Screenshots/17.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Datenschutzsperre']/..//input**) entspricht dem erwarteten Wert (Nein)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:54) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Minderjährig@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="66643ce0-fb02-4a90-98a0-4e819f599f27")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Minderjährig']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:360 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/23_e.png](Screenshots/Elements/23_e.png)
+
+
+![Bild - Screenshots/18.png](Screenshots/18.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Minderjährig']/..//input**) entspricht dem erwarteten Wert (Nein)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:55) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Kundenart@@] | privat |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="0ba1346b-157d-4598-b8c3-2f1e4a75269b")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Kundenart']/..//select**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:424 |
+ | Tag Name | select |
+ | Text | gewerblich
+privat |
+ | Wert | 0 |
+ | Titel | gewerblich |
+ | Aria | None |
+ | Klasse | enumerationcontrol-edit |
+ | Typ | select-one |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/24_e.png](Screenshots/Elements/24_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Kundenart']/..//select**) wurde auf den Wert (**privat**) gesetzt
+
+
+![Bild - Screenshots/19.png](Screenshots/19.png)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:56) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Portalkunde@@] | Ja |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="78be20f6-69ea-4407-a6b6-34690e1cdeac")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:616 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/25_e.png](Screenshots/Elements/25_e.png)
+
+
+![Bild - Screenshots/20.png](Screenshots/20.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input**) entspricht nicht dem erwarteten Wert (Ja) und wird nun geklickt
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="78be20f6-69ea-4407-a6b6-34690e1cdeac")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:616 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/26_e.png](Screenshots/Elements/26_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input**) geklickt
+
+
+![Bild - Screenshots/21.png](Screenshots/21.png)
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="78be20f6-69ea-4407-a6b6-34690e1cdeac")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:616 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Ja |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | True |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/27_e.png](Screenshots/Elements/27_e.png)
+
+
+![Bild - Screenshots/22.png](Screenshots/22.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Portalkunde']/..//input**) entspricht dem erwarteten Wert (Ja)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:30:59) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Zusätzlich Postversand@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="d8e03180-7567-4159-944a-60f343c0763a")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zusätzlich Postversand']/..//input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:648 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/28_e.png](Screenshots/Elements/28_e.png)
+
+
+![Bild - Screenshots/23.png](Screenshots/23.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zusätzlich Postversand']/..//input**) entspricht dem erwarteten Wert (Nein)
+
+## Element ein-/ausgeklappt prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:00) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="8c103047-07cf-47bf-a112-fcc2c69bf9a4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//span[@class='ms-nav-columns-caption' and text() = 'Kommunikation']/../..**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:246 |
+ | Tag Name | div |
+ | Text | Kommunikation
+Weniger anzeigen
+ADRESSE
+Adresse
+Straße
+Hausnr.
+Hausnr. Zusatz
+Adresse 2
+PLZ-Code
+Ort
+Bundesland
+Bundesland Beschreibung
+     Länder-/Regionscode
+Karte anzeigen
+KONTAKT
+Telefonnr.
+Ansprechpartner Telefon
+Telefon 2
+Ansprechpartner Telefon 2
+E-Mail
+Ansprechpartner E-Mail
+Faxnr.
+Homepage
+Korrespondenzart
+ Brief
+E-Mail
+Fax
+Sprachcode
+Briefanrede |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-nav-band expanded |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/29_e.png](Screenshots/Elements/29_e.png)
+
+
+![Bild - Screenshots/24.png](Screenshots/24.png)
+
+Das Element (**//span[@class='ms-nav-columns-caption' and text() = 'Kommunikation']/../..**) mit der Klasse (**ms-nav-band expanded**) und dem Inhalt (**Kommunikation
+Weniger anzeigen
+ADRESSE
+Adresse
+Straße
+Hausnr.
+Hausnr. Zusatz
+Adresse 2
+PLZ-Code
+Ort
+Bundesland
+Bundesland Beschreibung
+     Länder-/Regionscode
+Karte anzeigen
+KONTAKT
+Telefonnr.
+Ansprechpartner Telefon
+Telefon 2
+Ansprechpartner Telefon 2
+E-Mail
+Ansprechpartner E-Mail
+Faxnr.
+Homepage
+Korrespondenzart
+ Brief
+E-Mail
+Fax
+Sprachcode
+Briefanrede**) entspricht dem erwarteten Wert ausklappen = (**Ausklappen**)
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:01) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *2* sekunden gesetzt
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:01) </div>
+
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:31:03) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[2]//button[text()='Mehr anzeigen']**. Es konnte kein Element identifiziert werden.
+
+!!! ERROR:Fehler beim klicken auf das Elementes
+    Fehler beim Klicken auf das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[2]//button[text()='Mehr anzeigen']**). Das Element wurde nicht gefunden.
+
+!!! WARNING:Warnung
+    Aufgrund des Zusatzes **'Optional'** an der Aktion wurde der Fehler ignoriert. Der Testlauf wird fortgesetzt
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:03) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *20* sekunden gesetzt
+
+## Element prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:03) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | Weniger anzeigen | Weniger anzeigen |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="24effdda-eb68-4821-9b76-8b1325ec3d57")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[2]//button[text()='Weniger anzeigen']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:535<br>y:252 |
+ | Tag Name | button |
+ | Text | Weniger anzeigen |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | show-more-fields-button |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/30_e.png](Screenshots/Elements/30_e.png)
+
+Es wird geprüft, dass das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']/div[1]/div[2]//button[text()='Weniger anzeigen']**) exakt dem folgenden Wert entspricht (**Weniger anzeigen**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**Weniger anzeigen**) entspricht dem erwarteten Wert (**Weniger anzeigen**). Es wurde der Elementtext geprüft
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:04) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Straße@@] | Musterstraße |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="ba5e4c28-72b9-4e5f-84fe-a077ebc449e1")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Straße']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:342 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) AssistEdit öffnen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/31_e.png](Screenshots/Elements/31_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Straße']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**Musterstraße**) gesetzt
+
+
+![Bild - Screenshots/25.png](Screenshots/25.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:05) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Hausnr.@@] | 1 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="93df18f0-15f6-4b69-a2d6-a159a45287a3")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Hausnr.']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:374 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/32_e.png](Screenshots/Elements/32_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Hausnr.']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**1**) gesetzt
+
+
+![Bild - Screenshots/26.png](Screenshots/26.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:06) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Hausnr. Zusatz@@] | d |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="cd7c4e24-2187-4a1a-8eb4-5152e20b88b9")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Hausnr. Zusatz']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:406 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/33_e.png](Screenshots/Elements/33_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Hausnr. Zusatz']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**d**) gesetzt
+
+
+![Bild - Screenshots/27.png](Screenshots/27.png)
+
+## Element prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:08) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Straße@@] [@@Hausnr.@@][@@Hausnr. Zusatz@@] | Musterstraße 1d |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="7a7d640c-ca6b-45b7-864f-fecc364823d1")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Adresse 2']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:438 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | Musterstraße 1d |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/34_e.png](Screenshots/Elements/34_e.png)
+
+Es wird geprüft, dass das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Adresse 2']/..//input[@class='cursorinherit stringcontrol-edit']**) exakt dem folgenden Wert entspricht (**Musterstraße 1d**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**Musterstraße 1d**) entspricht dem erwarteten Wert (**Musterstraße 1d**). Es wurde der Elementvalue geprüft
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:08) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="b8784484-28a7-45e8-a6d6-4e6e2935d87b")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'PLZ-Code']/..//input[2]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:287<br>y:470 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | ... |
+ | Titel | Wert suchen |
+ | Aria | None |
+ | Klasse | ms-nav-lookupbutton ms-nav-button-1 |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/35_e.png](Screenshots/Elements/35_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'PLZ-Code']/..//input[2]**) geklickt
+
+
+![Bild - Screenshots/28.png](Screenshots/28.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:09) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="72d74bd4-4e18-4604-87e4-c93ed0f0fc55")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']/div/div[1]/div[2]/div[1]/div/div[2]/a[1]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:897<br>y:58 |
+ | Tag Name | a |
+ | Text |  |
+ | Wert | None |
+ | Titel | Suchen |
+ | Aria | None |
+ | Klasse | ms-list-itemLink icon-Magnifier |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/36_e.png](Screenshots/Elements/36_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']/div/div[1]/div[2]/div[1]/div/div[2]/a[1]**) geklickt
+
+
+![Bild - Screenshots/29.png](Screenshots/29.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:11) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@PLZ-Code@@] | 11099 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="286e52b9-235d-41cc-81c8-6310df76f8f5")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']/div/div[1]/div[2]/div[1]/div/div[2]/div[1]/input**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:743<br>y:58 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/37_e.png](Screenshots/Elements/37_e.png)
+
+Das Element (**//div[@id='contentBox']/div/div[1]/div[2]/div[1]/div/div[2]/div[1]/input**) wurde auf den Wert (**11099**) gesetzt
+
+
+![Bild - Screenshots/30.png](Screenshots/30.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:13) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="94124b74-0a7d-4bf7-bd84-658ead296307")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//form[@id='aspnetForm']//div[@class='ms-nav-listform']//table[contains(@id,'BusinessGrid')]//a[contains(@title,'11099')]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:71<br>y:164 |
+ | Tag Name | a |
+ | Text | 11099 |
+ | Wert | None |
+ | Titel | Datensatz '11099' auswählen |
+ | Aria | None |
+ | Klasse | stringcontrol-read |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/38_e.png](Screenshots/Elements/38_e.png)
+
+Es wurde auf das Element (**//form[@id='aspnetForm']//div[@class='ms-nav-listform']//table[contains(@id,'BusinessGrid')]//a[contains(@title,'11099')]**) geklickt
+
+
+![Bild - Screenshots/31.png](Screenshots/31.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:14) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Bundesland@@] | 1 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="4fc45f91-eeae-448d-a014-87ca37735111")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Bundesland']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:534 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/39_e.png](Screenshots/Elements/39_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Bundesland']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**1**) gesetzt
+
+
+![Bild - Screenshots/32.png](Screenshots/32.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:15) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Telefon@@] | 16778447 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="3b2cee3a-d6eb-4e6f-8df9-3a925aa8e1a2")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Telefonnr.']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:310 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | tel |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/40_e.png](Screenshots/Elements/40_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Telefonnr.']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**16778447**) gesetzt
+
+
+![Bild - Screenshots/33.png](Screenshots/33.png)
+
+!!! note:Hinweis
+    Der übergebene Style für das element **<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="3b2cee3a-d6eb-4e6f-8df9-3a925aa8e1a2")>** konnte nicht gesetzt werden
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:16) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Ansprechpartner Telefon@@] | Eine Beschreibung zur Telefonnr. |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="75d71d87-b332-49c5-99a3-935f741e2556")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner Telefon']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:342 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/41_e.png](Screenshots/Elements/41_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner Telefon']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**Eine Beschreibung zur Telefonnr.**) gesetzt
+
+
+![Bild - Screenshots/34.png](Screenshots/34.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:18) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Telefon 2@@] | 17612412521 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2292d540-f82c-4f2f-8127-6ca3b3c22f48")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Telefon 2']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:374 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | tel |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/42_e.png](Screenshots/Elements/42_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Telefon 2']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**17612412521**) gesetzt
+
+
+![Bild - Screenshots/35.png](Screenshots/35.png)
+
+!!! note:Hinweis
+    Der übergebene Style für das element **<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2292d540-f82c-4f2f-8127-6ca3b3c22f48")>** konnte nicht gesetzt werden
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:20) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Ansprechpartner Telefon 2@@] | Eine weitere Beschreibung zum Telefon |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="ce18dd96-624d-4fee-8932-66baf7f131cf")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner Telefon 2']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:406 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/43_e.png](Screenshots/Elements/43_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner Telefon 2']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**Eine weitere Beschreibung zum Telefon**) gesetzt
+
+
+![Bild - Screenshots/36.png](Screenshots/36.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:22) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@E-Mail@@] | Peter-Lustig@test.de |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="e15fd2ae-426e-465f-a0d7-598b25f4fb78")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'E-Mail']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:438 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | email |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/44_e.png](Screenshots/Elements/44_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'E-Mail']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**Peter-Lustig@test.de**) gesetzt
+
+
+![Bild - Screenshots/37.png](Screenshots/37.png)
+
+!!! note:Hinweis
+    Der übergebene Style für das element **<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="e15fd2ae-426e-465f-a0d7-598b25f4fb78")>** konnte nicht gesetzt werden
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:24) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Ansprechpartner E-Mail@@] | Fake E-Mail Adresse für Test |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="726cbb35-ba7f-4035-803c-fafd76e79c46")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner E-Mail']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:470 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/45_e.png](Screenshots/Elements/45_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Ansprechpartner E-Mail']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**Fake E-Mail Adresse für Test**) gesetzt
+
+
+![Bild - Screenshots/38.png](Screenshots/38.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:25) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Faxnr.@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="43fe97f9-ae0a-4c66-b5c3-339c2a2b602a")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Faxnr.']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:502 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/46_e.png](Screenshots/Elements/46_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Faxnr.']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/39.png](Screenshots/39.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:27) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Homepage@@] | www.test.de.vu |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="b299bf0a-7dcd-4294-92d5-90f3666a9d67")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Homepage']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:534 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | url |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/47_e.png](Screenshots/Elements/47_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Homepage']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**www.test.de.vu**) gesetzt
+
+!!! note:Hinweis
+    Der Style zum markieren innerhalb des Screenshots konnte nicht gesetzt werden
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:28) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Korrespondenzart@@] | Brief |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="a00bb4b2-4126-4903-95a8-a2968d30acd3")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Korrespondenzart']/..//select[@class='enumerationcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:566 |
+ | Tag Name | select |
+ | Text |  Brief
+E-Mail
+Fax |
+ | Wert | 0 |
+ | Titel |   |
+ | Aria | None |
+ | Klasse | enumerationcontrol-edit |
+ | Typ | select-one |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/48_e.png](Screenshots/Elements/48_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Korrespondenzart']/..//select[@class='enumerationcontrol-edit']**) wurde auf den Wert (**Brief**) gesetzt
+
+
+![Bild - Screenshots/40.png](Screenshots/40.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:29) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Sprachcode@@] | DEU |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="cf6277eb-bc29-459e-acb5-05d90ebeabfa")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sprachcode']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:598 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/49_e.png](Screenshots/Elements/49_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sprachcode']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**DEU**) gesetzt
+
+
+![Bild - Screenshots/41.png](Screenshots/41.png)
+
+## Element ein-/ausgeklappt prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:30) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="8272c99d-2598-462b-8a80-68460dc324d2")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//span[@class='ms-nav-columns-caption' and text() = 'Jur. Person']/../..**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:382 |
+ | Tag Name | div |
+ | Text | Jur. Person
+Rechtsform
+Rechtsform Beschreibung
+     Handelsreg.-Nr.
+Handelsregistergericht
+Zust. Amtsgericht |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-nav-band expanded |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/50_e.png](Screenshots/Elements/50_e.png)
+
+
+![Bild - Screenshots/42.png](Screenshots/42.png)
+
+Das Element (**//span[@class='ms-nav-columns-caption' and text() = 'Jur. Person']/../..**) mit der Klasse (**ms-nav-band expanded**) und dem Inhalt (**Jur. Person
+Rechtsform
+Rechtsform Beschreibung
+     Handelsreg.-Nr.
+Handelsregistergericht
+Zust. Amtsgericht**) entspricht dem erwarteten Wert ausklappen = (**Ausklappen**)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:31) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Rechtsform@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="7d25101a-fa81-4329-8d50-b2277c67f15c")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Rechtsform']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:414 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/51_e.png](Screenshots/Elements/51_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Rechtsform']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/43.png](Screenshots/43.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:32) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Handelsreg.-Nr.@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="81aa8861-e70c-45c6-bc3f-d9b4836b50af")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Handelsreg.-Nr.']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:478 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/52_e.png](Screenshots/Elements/52_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Handelsreg.-Nr.']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/44.png](Screenshots/44.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:33) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Handelsregistergericht@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="49c4c9b0-a3b7-4a29-9de2-ee459f1ac1d3")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Handelsregistergericht']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:414 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/53_e.png](Screenshots/Elements/53_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Handelsregistergericht']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/45.png](Screenshots/45.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:34) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Zust. Amtsgericht@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="8783922e-f487-414f-9261-426d0bc24aae")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zust. Amtsgericht']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:446 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/54_e.png](Screenshots/Elements/54_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zust. Amtsgericht']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/46.png](Screenshots/46.png)
+
+## Element ein-/ausgeklappt prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:35) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="4b7e7f78-5f9a-4ebc-9229-d1e78340a968")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//span[@class='ms-nav-columns-caption' and text() = 'Schule']/../..**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:616 |
+ | Tag Name | div |
+ | Text | Schule
+Erstmalige Anerkennung am
+Letzte Zertifizierung am
+Letztes Situationsgespräch am
+Sperrung ab
+Sperrgrund
+Sperrgrund Beschreibung
+     Übertragungsart Kostennachweis
+ DFÜ
+Liste
+Manuell
+Zertifizierung |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-nav-band expanded |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/55_e.png](Screenshots/Elements/55_e.png)
+
+
+![Bild - Screenshots/47.png](Screenshots/47.png)
+
+Das Element (**//span[@class='ms-nav-columns-caption' and text() = 'Schule']/../..**) mit der Klasse (**ms-nav-band expanded**) und dem Inhalt (**Schule
+Erstmalige Anerkennung am
+Letzte Zertifizierung am
+Letztes Situationsgespräch am
+Sperrung ab
+Sperrgrund
+Sperrgrund Beschreibung
+     Übertragungsart Kostennachweis
+ DFÜ
+Liste
+Manuell
+Zertifizierung**) entspricht dem erwarteten Wert ausklappen = (**Ausklappen**)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:36) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Erstmalige Anerkennung am@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="dd48d662-9f43-4009-82f3-898cd9ab49ca")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Erstmalige Anerkennung am']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:648 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | Geben Sie das Datum im Format dd.MM.yyyy ein |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit hasDatepicker |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/56_e.png](Screenshots/Elements/56_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Erstmalige Anerkennung am']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/48.png](Screenshots/48.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:37) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Letzte Zertifizierung am@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="859bba31-f2f6-485e-a870-af041c447ccd")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Letzte Zertifizierung am']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:414 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | Geben Sie das Datum im Format dd.MM.yyyy ein |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit hasDatepicker |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/57_e.png](Screenshots/Elements/57_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Letzte Zertifizierung am']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/49.png](Screenshots/49.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:39) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Letztes Situationsgespräch am@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="344d6e97-32ab-41bc-a65c-21fcc448fefa")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Letztes Situationsgespräch am']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:446 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | Geben Sie das Datum im Format dd.MM.yyyy ein |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit hasDatepicker |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/58_e.png](Screenshots/Elements/58_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Letztes Situationsgespräch am']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/50.png](Screenshots/50.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:40) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Sperrung ab@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="883f061a-2239-40b4-94ef-33e15931995d")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sperrung ab']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:478 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | Geben Sie das Datum im Format dd.MM.yyyy ein |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit hasDatepicker |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/59_e.png](Screenshots/Elements/59_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sperrung ab']/..//input[@class='cursorinherit stringcontrol-edit hasDatepicker']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/51.png](Screenshots/51.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:41) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Sperrgrund@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2288d523-45b0-4887-87f4-096c1c05159c")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sperrgrund']/..//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:382 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel | (Alt + Nach-unten) Wert suchen |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/60_e.png](Screenshots/Elements/60_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Sperrgrund']/..//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/52.png](Screenshots/52.png)
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:42) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Übertragungsart Kostennachweis@@] |  |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2436ad7c-f4c5-419d-8f73-71edb949779c")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Übertragungsart Kostennachweis']/..//select[@class='enumerationcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:446 |
+ | Tag Name | select |
+ | Text |  DFÜ
+Liste
+Manuell |
+ | Wert | 0 |
+ | Titel |   |
+ | Aria | None |
+ | Klasse | enumerationcontrol-edit |
+ | Typ | select-one |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/61_e.png](Screenshots/Elements/61_e.png)
+
+Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Übertragungsart Kostennachweis']/..//select[@class='enumerationcontrol-edit']**) wurde auf den Wert (****) gesetzt
+
+
+![Bild - Screenshots/53.png](Screenshots/53.png)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:43) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Zertifizierung@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="c1d777e6-a410-4598-a532-3aa17e981e83")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zertifizierung']/..//input[@class='cursorinherit booleancontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:508<br>y:478 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/62_e.png](Screenshots/Elements/62_e.png)
+
+
+![Bild - Screenshots/54.png](Screenshots/54.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Zertifizierung']/..//input[@class='cursorinherit booleancontrol-edit']**) entspricht dem erwarteten Wert (Nein)
+
+## Element ein-/ausgeklappt prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:44) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="34ffb6b1-9423-4870-bb6f-e88de538c296")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//span[@class='ms-nav-columns-caption' and text() = 'Übergreifende Information']/../..**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:524 |
+ | Tag Name | div |
+ | Text | Übergreifende Information
+Mitglied
+Versorgungsempfänger
+Versorgungsausgleichsberechtigter
+Arbeitgeber
+Versorgungswerk
+Gericht
+Sterbedatum
+Sterbegeld
+0 | 00
+Betrieb Nr. AG
+Geburtsdatum
+Geburtsdatum Einw. Meldeamt
+Alter
+0
+Geschlecht
+ Männlich
+Weiblich
+Divers
+Rentenbeginn
+RENTENBEZUGSMITTEILUNG
+Geburtsname
+Geburtsort
+RBM Identifikationsnummer |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-nav-band expanded |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/63_e.png](Screenshots/Elements/63_e.png)
+
+
+![Bild - Screenshots/55.png](Screenshots/55.png)
+
+Das Element (**//span[@class='ms-nav-columns-caption' and text() = 'Übergreifende Information']/../..**) mit der Klasse (**ms-nav-band expanded**) und dem Inhalt (**Übergreifende Information
+Mitglied
+Versorgungsempfänger
+Versorgungsausgleichsberechtigter
+Arbeitgeber
+Versorgungswerk
+Gericht
+Sterbedatum
+Sterbegeld
+0,00
+Betrieb Nr. AG
+Geburtsdatum
+Geburtsdatum Einw. Meldeamt
+Alter
+0
+Geschlecht
+ Männlich
+Weiblich
+Divers
+Rentenbeginn
+RENTENBEZUGSMITTEILUNG
+Geburtsname
+Geburtsort
+RBM Identifikationsnummer**) entspricht dem erwarteten Wert ausklappen = (**Ausklappen**)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:45) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Arbeitgeber@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="59735286-f4de-4403-8e75-d8b64082695a")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Arbeitgeber']/..//input[@class='cursorinherit booleancontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:652 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/64_e.png](Screenshots/Elements/64_e.png)
+
+
+![Bild - Screenshots/56.png](Screenshots/56.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Arbeitgeber']/..//input[@class='cursorinherit booleancontrol-edit']**) entspricht dem erwarteten Wert (Nein)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:46) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Versorgungswerk@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="2086dafb-14e5-4a1d-b635-3ed1b520914f")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Versorgungswerk']/..//input[@class='cursorinherit booleancontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:648 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/65_e.png](Screenshots/Elements/65_e.png)
+
+
+![Bild - Screenshots/57.png](Screenshots/57.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Versorgungswerk']/..//input[@class='cursorinherit booleancontrol-edit']**) entspricht dem erwarteten Wert (Nein)
+
+## Schalter setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:47) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | [@@Gericht@@] | Nein |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="6778e687-3136-49b6-9b1d-8688784c6489")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Gericht']/..//input[@class='cursorinherit booleancontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:191<br>y:648 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert | on |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit booleancontrol-edit |
+ | Typ | checkbox |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/66_e.png](Screenshots/Elements/66_e.png)
+
+
+![Bild - Screenshots/58.png](Screenshots/58.png)
+
+!!! Tip:Erfolgreich
+    Das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//a[text() = 'Gericht']/..//input[@class='cursorinherit booleancontrol-edit']**) entspricht dem erwarteten Wert (Nein)
+
+## Variable setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:48) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="a5b22271-f87a-4e5a-bb20-89c164b4ba0b")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='content-area-box']//h1[@class='pagetitle-control']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:181 |
+ | Tag Name | h1 |
+ | Text | 130 ∙ Testschule |
+ | Wert | None |
+ | Titel | 130 ∙ Testschule |
+ | Aria | None |
+ | Klasse | pagetitle-control |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/67_e.png](Screenshots/Elements/67_e.png)
+
+!!! note:Hinweis
+    Die Variable wird auf den **Textinhalt** des Elements gesetzt.
+
+Die Variable (**Partner Titel**) mit dem Wert (**130 ∙ Testschule**) wurde auf den Wert (**130 ∙ Testschule**) geändert
+
+## Testvariable bearbeiten
+<div class = "TimeStamp" > (22.04.2020 - 05:31:48) </div>
+
+
+!!! Tip:Erfolgreich
+    Der Substring ** ∙ Testschule** wurde aus der Testvariablen **[var:Partner Titel:]** entfernt.
+
+Die Variable (**Kontaktnr**) mit dem Wert (**130**) wurde auf den Wert (**130**) geändert
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:48) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="94c86120-1c59-4686-8968-5bc8ce64e5d9")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='ribbon-container']//span[@class='ms-cui-ctl-largelabel' and text() = 'Bearbeiten' and not(@aria-hidden)]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:179<br>y:84 |
+ | Tag Name | span |
+ | Text | Bearbeiten |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-cui-ctl-largelabel |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/68_e.png](Screenshots/Elements/68_e.png)
+
+Es wurde auf das Element (**//div[@id='ribbon-container']//span[@class='ms-cui-ctl-largelabel' and text() = 'Bearbeiten' and not(@aria-hidden)]**) geklickt
+
+
+![Bild - Screenshots/59.png](Screenshots/59.png)
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:50) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *5* sekunden gesetzt
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:50) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="8ac144c0-8c19-4cd6-8ae5-0ed63c057264")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//*[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='OK']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:682<br>y:382 |
+ | Tag Name | button |
+ | Text | OK |
+ | Wert |  |
+ | Titel | OK |
+ | Aria | None |
+ | Klasse | cursorinherit ms-nav-button highlight-btn |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/69_e.png](Screenshots/Elements/69_e.png)
+
+Es wurde auf das Element (**//*[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='OK']**) geklickt
+
+
+![Bild - Screenshots/60.png](Screenshots/60.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:51) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="1fc9385b-2a22-48ee-9130-2a3011ca70b7")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox'][@class='ms-nav-worksheet']//div[@title='Seite speichern und schließen']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:622<br>y:147 |
+ | Tag Name | div |
+ | Text |  |
+ | Wert | None |
+ | Titel | Seite speichern und schließen |
+ | Aria | None |
+ | Klasse | icon-Dismiss dialog-close |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/70_e.png](Screenshots/Elements/70_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox'][@class='ms-nav-worksheet']//div[@title='Seite speichern und schließen']**) geklickt
+
+
+![Bild - Screenshots/61.png](Screenshots/61.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:53) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="81a30b81-9957-412a-8125-f88395fcb6d3")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='dialog-system-actions']/div[@title='Seite speichern und schließen']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:622<br>y:147 |
+ | Tag Name | div |
+ | Text |  |
+ | Wert | None |
+ | Titel | Seite speichern und schließen |
+ | Aria | None |
+ | Klasse | icon-Dismiss dialog-close |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/71_e.png](Screenshots/Elements/71_e.png)
+
+Es wurde auf das Element (**//div[@class='dialog-system-actions']/div[@title='Seite speichern und schließen']**) geklickt
+
+
+![Bild - Screenshots/62.png](Screenshots/62.png)
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:54) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="b59ddcb1-d6d7-43e4-ab24-3f49b5776e88")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='Nein']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:682<br>y:373 |
+ | Tag Name | button |
+ | Text | Nein |
+ | Wert |  |
+ | Titel | Nein |
+ | Aria | None |
+ | Klasse | cursorinherit ms-nav-button |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/72_e.png](Screenshots/Elements/72_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox'][@class='message-dialog two_columns_title']//button[@title='Nein']**) geklickt
+
+
+![Bild - Screenshots/63.png](Screenshots/63.png)
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:55) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *20* sekunden gesetzt
+
+## GeVo Informationen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:55) </div>
+
+
+ | Feld | Wert |
+ | --- | --- |
+ | GeVo-Name | Gevo Kontakt_suchen_und_löschen |
+ | GeVo-Beschreibung | Dieser GeVo beschreibt die Aktionen Suchen und löschen eines Partners auf Basis eine vorab ermittelteten Kontaktnummer. Vor der Löschung wird geprüft ob der gewünschte Partner geöffnet wurde |
+ | Akzeptanzkriterium(**Jira-#**) | [Unitop-9](https://jira.lak.local:8443/browse/Unitop-9) - (Komponente: **Kontaktverwaltung**) |
+
+## GeVo Ablauf
+<div class = "TimeStamp" > (22.04.2020 - 05:31:55) </div>
+
+
+Innerhalb des GeVos werden die folgenden Schritte durchgeführt.
+
+ | Step # | typ | Aktion | Parameter |
+ | --- | --- | --- | --- |
+ | 2 | GeVo | Kontakt_suchen_und_öffnen |  |
+ | 4 | Steuerung | Element_Klicken |  |
+ | 5 | Steuerung | Element_enthält_Wert_prüfen | [var:Kontaktnr:] |
+ | 6 | Steuerung | Element_enthält_Wert_prüfen | löschen |
+ | 7 | Steuerung | Element_Klicken |  |
+ | 11 | Steuerung | Wartezeit_Timeout_Setzen | 5 |
+ | 13 | Steuerung | Element_enthält_Wert_nicht | Fehler |
+ | 14 | Steuerung | Wartezeit_Timeout_Setzen | Default |
+
+## GeVo
+<div class = "TimeStamp" > (22.04.2020 - 05:31:55) </div>
+
+
+!!! note:Hinweis
+    GeVo Ablauf wird nun gestartet
+
+### GeVo Ablauf wird vorbereitet
+<div class = "TimeStamp" > (22.04.2020 - 05:31:55) </div>
+
+
+## GeVo Informationen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:56) </div>
+
+
+ | Feld | Wert |
+ | --- | --- |
+ | GeVo-Name | Gevo Kontakt suchen und öffnen |
+ | GeVo-Beschreibung | Dieser GeVo beschreibt die Aktionen Suchen und öffnen eines Partners auf Basis eine vorab ermittelteten Kontaktnummer. Vor der Löschung wird geprüft ob der gewünschte Partner geöffnet wurde |
+ | Akzeptanzkriterium(**Jira-#**) | [Unitop-9](https://jira.lak.local:8443/browse/Unitop-9) - (Komponente: **Kontaktverwaltung**) |
+
+## GeVo Ablauf
+<div class = "TimeStamp" > (22.04.2020 - 05:31:56) </div>
+
+
+Innerhalb des GeVos werden die folgenden Schritte durchgeführt.
+
+ | Step # | typ | Aktion | Parameter |
+ | --- | --- | --- | --- |
+ | 2 | Steuerung | Element_Klicken |  |
+ | 5 | Steuerung | Element_Klicken |  |
+ | 6 | Steuerung | Wartezeit_Timeout_Setzen | Default |
+ | 8 | Steuerung | Element_Klicken |  |
+ | 10 | Steuerung | Variable_setzen | [var:Anzahl Suchergebnisse:] |
+ | 11 | Steuerung | Element_setzen | @[var:Kontaktnr:] |
+ | 13 | Steuerung | Element_enthält_Wert_nicht | [var:Anzahl Suchergebnisse:] |
+ | 15 | Steuerung | Element_Klicken | [var:Kontaktnr:] |
+ | 16 | Steuerung | Warten_auf_Element | Appear |
+ | 17 | Steuerung | Element_enthält_Wert_prüfen | [var:Kontaktnr:] |
+
+## GeVo
+<div class = "TimeStamp" > (22.04.2020 - 05:31:56) </div>
+
+
+!!! note:Hinweis
+    GeVo Ablauf wird nun gestartet
+
+### GeVo Ablauf wird vorbereitet
+<div class = "TimeStamp" > (22.04.2020 - 05:31:56) </div>
+
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:56) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="023adb73-a13c-4545-9a6c-94cd67ad5f20")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:0<br>y:219 |
+ | Tag Name | a |
+ | Text | Kontakte |
+ | Wert | None |
+ | Titel | Kontakte |
+ | Aria | None |
+ | Klasse | ms-nav-navpane-nochildren |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/73_e.png](Screenshots/Elements/73_e.png)
+
+Es wurde auf das Element (**//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte']**) geklickt
+
+
+![Bild - Screenshots/64.png](Screenshots/64.png)
+
+!!! ERROR:Fehler beim klicken des Elementes
+    Element (**//div[@id='sideNavBox']//ul[@class='ms-nav-navpane-navarea-navgroup']//a[@title='Kontakte']**) - konnte nicht geklickt werden
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:31:58) </div>
+
+
+In der Funktion **GUI-Automation -> Element klicken** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: element click intercepted: Element <a draggable="false" class="ms-nav-navpane-nochildren" id="00014c5d-0001-4c0d-0008-0000836bd2d2" title="..." href="#" style="" tabindex="-1" aria-hidden="true">Kontakte</a> is not clickable at point (111, 232). Other element would receive the click: <a draggable="false" class="ms-nav-navpane-nochildren ms-nav-navpane-currentnode" aria-selected="true" id="00014c5d-0001-4c0d-0008-0000836bd2d2" title="..." href="#">Kontakte</a><br>  (Session info: chrome=80.0.3987.106)<br>
+
+!!! WARNING:Warnung
+    Aufgrund des Zusatzes **'Optional'** an der Aktion wurde der Fehler ignoriert. Der Testlauf wird fortgesetzt
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:58) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="88787c5c-5ac7-4e9a-8555-6891d659dbe9")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='list-layout-chooser']//a[@title='Als Übersicht anzeigen']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:500<br>y:179 |
+ | Tag Name | a |
+ | Text |  |
+ | Wert | None |
+ | Titel | Als Übersicht anzeigen |
+ | Aria | None |
+ | Klasse | ms-list-itemLink icon-NotBrickView selected |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/74_e.png](Screenshots/Elements/74_e.png)
+
+Es wurde auf das Element (**//div[@class='list-layout-chooser']//a[@title='Als Übersicht anzeigen']**) geklickt
+
+
+![Bild - Screenshots/65.png](Screenshots/65.png)
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:31:59) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *20* sekunden gesetzt
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:31:59) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="3de7e8b0-6c41-4284-8d66-137f345a6ae4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='content-header-actions']//a[@title='Suchen']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:621<br>y:180 |
+ | Tag Name | a |
+ | Text |  |
+ | Wert | None |
+ | Titel | Suchen |
+ | Aria | None |
+ | Klasse | ms-list-itemLink icon-Magnifier |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/75_e.png](Screenshots/Elements/75_e.png)
+
+Es wurde auf das Element (**//div[@class='content-header-actions']//a[@title='Suchen']**) geklickt
+
+
+![Bild - Screenshots/66.png](Screenshots/66.png)
+
+## Variable setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:00) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="857d465c-b592-4161-b358-220038efc5c4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='edit-container right ms-nav-editcontrol-nocaption']/span[@class='stringcontrol-read']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:224<br>y:245 |
+ | Tag Name | span |
+ | Text | 683406 |
+ | Wert | None |
+ | Titel | 683406 |
+ | Aria | None |
+ | Klasse | stringcontrol-read |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/76_e.png](Screenshots/Elements/76_e.png)
+
+!!! note:Hinweis
+    Die Variable wird auf den **Textinhalt** des Elements gesetzt.
+
+Die Variable (**Anzahl Suchergebnisse**) mit dem Wert (**683406**) wurde auf den Wert (**683406**) geändert
+
+## Element setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:00) </div>
+
+
+ | Parameter Identifikator | Testdatum |
+ | --- | --- |
+ | @[var:Kontaktnr:] | @130 |
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="f01bf465-6236-488a-8940-fb7f716d6296")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='content-header-actions']//input[@class='cursorinherit stringcontrol-edit']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:467<br>y:208 |
+ | Tag Name | input |
+ | Text |  |
+ | Wert |  |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | cursorinherit stringcontrol-edit |
+ | Typ | text |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/77_e.png](Screenshots/Elements/77_e.png)
+
+Das Element (**//div[@class='content-header-actions']//input[@class='cursorinherit stringcontrol-edit']**) wurde auf den Wert (**@130**) gesetzt
+
+
+![Bild - Screenshots/67.png](Screenshots/67.png)
+
+## Wert in Element nicht vorhanden prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:02) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="857d465c-b592-4161-b358-220038efc5c4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@class='edit-container right ms-nav-editcontrol-nocaption']/span[@class='stringcontrol-read']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:224<br>y:245 |
+ | Tag Name | span |
+ | Text | 683406 |
+ | Wert | None |
+ | Titel | 683406 |
+ | Aria | None |
+ | Klasse | stringcontrol-read |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/78_e.png](Screenshots/Elements/78_e.png)
+
+Es wird gepürft, dass das Element (**//div[@class='edit-container right ms-nav-editcontrol-nocaption']/span[@class='stringcontrol-read']**) den folgenden Wert enthält (**683406**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+
+![Bild - Screenshots/68.png](Screenshots/68.png)
+
+!!! Tip:Erfolgreich
+    Der Wert (**683406**) ist in dem geprüften Wert (**1**) **nicht** mehr enthalten. Es wurden (**3**) Sekunden gewartet
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:32:06) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="4dea1271-f098-4558-a956-e3896a3a2960")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//table[contains(@id,'BusinessGrid')]//a[contains(@title,'130') and text()='130']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:249<br>y:330 |
+ | Tag Name | a |
+ | Text | 130 |
+ | Wert | None |
+ | Titel | Datensatz '130' in einem neuem Fenster öffnen |
+ | Aria | None |
+ | Klasse | stringcontrol-read ms-nav-strong-styleview |
+ | Typ |  |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/79_e.png](Screenshots/Elements/79_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']//table[contains(@id,'BusinessGrid')]//a[contains(@title,'130') and text()='130']**) geklickt
+
+
+![Bild - Screenshots/69.png](Screenshots/69.png)
+
+## Warten auf Element
+<div class = "TimeStamp" > (22.04.2020 - 05:32:07) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="56496eea-34ba-4188-a123-583e06db1b48")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//h1[@class='pagetitle-control']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:181 |
+ | Tag Name | h1 |
+ | Text | 130 ∙ Testschule |
+ | Wert | None |
+ | Titel | 130 ∙ Testschule |
+ | Aria | None |
+ | Klasse | pagetitle-control |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/80_e.png](Screenshots/Elements/80_e.png)
+
+!!! Tip:Erfolgreich
+    Das Element - **//div[@id='contentBox']//div[@class='ms-nav-scrollable']//h1[@class='pagetitle-control']** ist vorhanden.
+
+## Element auf enthaltenen Wert prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:11) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="56496eea-34ba-4188-a123-583e06db1b48")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//h1[@class='pagetitle-control']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:66<br>y:181 |
+ | Tag Name | h1 |
+ | Text | 130 ∙ Testschule |
+ | Wert | None |
+ | Titel | 130 ∙ Testschule |
+ | Aria | None |
+ | Klasse | pagetitle-control |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/81_e.png](Screenshots/Elements/81_e.png)
+
+Es wird gepürft, dass das Element (**//div[@id='contentBox']//div[@class='ms-nav-scrollable']//h1[@class='pagetitle-control']**) den folgenden Wert enthält (**130**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**130**) ist in dem geprüften Wert (**<span style = "text-decoration: underline;" > _130_ </span> ∙ Testschule**) enthalten. Es wurden (**0**) Sekunden gewartet
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:32:12) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="d7812eb6-9dde-4135-ab85-f1927403edc7")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='Ribbon']//span[text() = 'Löschen' and not(@aria-hidden)]**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:257<br>y:74 |
+ | Tag Name | span |
+ | Text | Löschen |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | ms-cui-ctl-mediumlabel |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/82_e.png](Screenshots/Elements/82_e.png)
+
+Es wurde auf das Element (**//div[@id='Ribbon']//span[text() = 'Löschen' and not(@aria-hidden)]**) geklickt
+
+
+![Bild - Screenshots/70.png](Screenshots/70.png)
+
+## Element auf enthaltenen Wert prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:13) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="6b16db08-1d09-435b-8c87-89e51a7dbea4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='dialog-title']//p**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:332<br>y:284 |
+ | Tag Name | p |
+ | Text | 130 ∙ Testschule löschen? |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | staticstringcontrol |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/83_e.png](Screenshots/Elements/83_e.png)
+
+Es wird gepürft, dass das Element (**//div[@id='contentBox']//div[@class='dialog-title']//p**) den folgenden Wert enthält (**130**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**130**) ist in dem geprüften Wert (**<span style = "text-decoration: underline;" > _130_ </span> ∙ Testschule löschen?**) enthalten. Es wurden (**0**) Sekunden gewartet
+
+## Element auf enthaltenen Wert prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:14) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="6b16db08-1d09-435b-8c87-89e51a7dbea4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='dialog-title']//p**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:332<br>y:284 |
+ | Tag Name | p |
+ | Text | 130 ∙ Testschule löschen? |
+ | Wert | None |
+ | Titel |  |
+ | Aria | None |
+ | Klasse | staticstringcontrol |
+ | Typ | None |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/84_e.png](Screenshots/Elements/84_e.png)
+
+Es wird gepürft, dass das Element (**//div[@id='contentBox']//div[@class='dialog-title']//p**) den folgenden Wert enthält (**löschen**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+!!! Tip:Erfolgreich
+    Der Wert (**löschen**) ist in dem geprüften Wert (**130 ∙ Testschule <span style = "text-decoration: underline;" > _löschen_ </span>?**) enthalten. Es wurden (**0**) Sekunden gewartet
+
+## Element Klicken
+<div class = "TimeStamp" > (22.04.2020 - 05:32:15) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="4f79597f-7809-4716-a9ae-0510e0b6b72e")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//button[@title='Ja']**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | x:606<br>y:362 |
+ | Tag Name | button |
+ | Text | Ja |
+ | Wert |  |
+ | Titel | Ja |
+ | Aria | None |
+ | Klasse | cursorinherit ms-nav-button |
+ | Typ | button |
+ | ID | None |
+ | Wird angezeigt? | True |
+ | Aktiviert? | True |
+ | Selektiert? | False |
+
+
+![Bild von selektiertem Element - Screenshots/Elements/85_e.png](Screenshots/Elements/85_e.png)
+
+Es wurde auf das Element (**//div[@id='contentBox']//button[@title='Ja']**) geklickt
+
+
+![Bild - Screenshots/71.png](Screenshots/71.png)
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:16) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *5* sekunden gesetzt
+
+## Wert in Element nicht vorhanden prüfen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:16) </div>
+
+
+Das folgende Element (**<selenium.webdriver.remote.webelement.WebElement (session="a16dc7b959423d124ac9ff2f22f373fa", element="6b16db08-1d09-435b-8c87-89e51a7dbea4")>**) wurde mittels dem folgenden (**xpath**) selektiert.<br>**xpath** = (**//div[@id='contentBox']//div[@class='dialog-title']//p**)
+
+Zu dem übergebenen Element wurden die folgenden Attribute ermittelt.
+
+ | Attribut | Wert |
+ | --- | --- |
+ | Position | Attr. nicht vorhanden |
+ | Tag Name | Attr. nicht vorhanden |
+ | Text | Attr. nicht vorhanden |
+ | Wert | Attr. nicht vorhanden |
+ | Wert | Attr. nicht vorhanden |
+ | Wert | Attr. nicht vorhanden |
+ | Wert | Attr. nicht vorhanden |
+ | Wert | Attr. nicht vorhanden |
+ | Wert | Attr. nicht vorhanden |
+ | Wird angezeigt? | Attr. nicht vorhanden |
+ | Aktiviert? | Attr. nicht vorhanden |
+ | Selektiert? | Attr. nicht vorhanden |
+
+Fehler beim erzeugen des Screenshots für das Element
+
+Es wird gepürft, dass das Element (**//div[@id='contentBox']//div[@class='dialog-title']//p**) den folgenden Wert enthält (**Fehler**)
+
+!!! note:Hinweis
+    Der Vergleich ist Case-Sensitiv
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:21) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='dialog-title']//p**. Es konnte kein Element identifiziert werden.
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:21) </div>
+
+
+In der Funktion **GUI-Automation -> Element enthält Wert nicht** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: stale element reference: element is not attached to the page document<br>  (Session info: chrome=80.0.3987.106)<br><br>**Das Element wurde erneut gesetzt und der Testlauf wird fortgesetzt.**
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:28) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='dialog-title']//p**. Es konnte kein Element identifiziert werden.
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:28) </div>
+
+
+In der Funktion **GUI-Automation -> Element enthält Wert nicht** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    'NoneType' object has no attribute 'text'<br>**Das Element wurde erneut gesetzt und der Testlauf wird fortgesetzt.**
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:34) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='dialog-title']//p**. Es konnte kein Element identifiziert werden.
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:34) </div>
+
+
+In der Funktion **GUI-Automation -> Element enthält Wert nicht** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    'NoneType' object has no attribute 'text'<br>**Das Element wurde erneut gesetzt und der Testlauf wird fortgesetzt.**
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:40) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='dialog-title']//p**. Es konnte kein Element identifiziert werden.
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:40) </div>
+
+
+In der Funktion **GUI-Automation -> Element enthält Wert nicht** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    'NoneType' object has no attribute 'text'<br>**Das Element wurde erneut gesetzt und der Testlauf wird fortgesetzt.**
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:46) </div>
+
+
+In der Funktion **GUI-Automation -> Get Element** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    Message: <br>
+
+!!! ERROR:Fehler beim identifizieren
+    Fehler beim identifizieren des Elements - **//div[@id='contentBox']//div[@class='dialog-title']//p**. Es konnte kein Element identifiziert werden.
+
+### Fehler in Funktion
+<div class = "TimeStamp" > (22.04.2020 - 05:32:46) </div>
+
+
+In der Funktion **GUI-Automation -> Element enthält Wert nicht** ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde erzeugt
+
+!!! ERROR:Exception
+    'NoneType' object has no attribute 'text'<br>**Das Element wurde erneut gesetzt und der Testlauf wird fortgesetzt.**
+
+!!! WARNING:Warnung
+    Das Element (**//div[@id='contentBox']//div[@class='dialog-title']//p**) konnte nicht auf den Wert (**Fehler**) geprüft werden, da das Element nicht vorhanden war
+
+!!! note:Hinweis
+    Der Style zum markieren innerhalb des Screenshots konnte nicht gesetzt werden
+
+## Wartezeit Timeout setzen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+!!! note:Hinweis
+    Die Wartezeit bis zu einem Timeout wurde auf *20* sekunden gesetzt
+
+# Testfall Abschluss
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+!!! Tip:Erfolgreich
+    Der Testlauf war erfolgreich
+
+## Prozesse bereinigen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+### Bestehende Prozesse entfernen
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+Bereits bestehende Prozesse werden mittels der folgenden Befehle vor Erzeugung einer neuen Webdriver-Instanz entfernt.
+
+!!! note:Hinweis
+    Hier können Fehler angezeigt werden. Diese haben jedoch keinen unmittelbaren Einfluss auf den Testablauf. Das Kommando "TASKKILL" erzeugt eine Fehlerausgabe, sobald der gewünschte Prozesse nicht vorhanden ist
+
+#### Webdriver
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+Der folgende Befehl wurde ausgeführt.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+TASKKILL /f /IM CHROMEDRIVER.EXE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Ausgabe.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python linenumbers
+ERFOLGREICH: Der Prozess "chromedriver.exe" mit PID 5888 wurde beendet.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Fehler.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+Es wurden keine Fehler erzeugt.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#### Browser
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+Der folgende Befehl wurde ausgeführt.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+TASKKILL /f /IM CHROME.EXE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Ausgabe.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python linenumbers
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 3780 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 6776 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 7392 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 6420 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 6500 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 3252 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 6096 wurde beendet.
+ERFOLGREICH: Der Prozess "chrome.exe" mit PID 1864 wurde beendet.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Befehl erzeugte folgende Fehler.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+Es wurden keine Fehler erzeugt.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Nicht verwendete Testdaten
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+Die folgenden Testdaten waren in der Testdatendatei vorhanden, wurde jedoch im Laufe der Testfalldurchführung nicht von einer Aktion verwendet.
+
+ | Nicht verwendete Testdaten | Beschreibung |
+ | --- | --- |
+ | Ort | Testdatum wurde nicht verwendet |
+ | Portalkunde | Testdatum wurde nicht verwendet |
+ | Zusätzlicher Postversand | Testdatum wurde nicht verwendet |
+ |  | Testdatum wurde nicht verwendet |
+ | Sperrgrund Beschreibung | Testdatum wurde nicht verwendet |
+ | Kein Postversand | Testdatum wurde nicht verwendet |
+ | Kein Postversand | Testdatum wurde nicht verwendet |
+
+Alle nicht verwendeten Testdaten können aus der Testdatendatei entfernt werden.
+
+!!! note:Hinweis
+    Sollte der Testlauf vorzeitig abgebrochen werden, ist die Liste nicht aussagekräftig, da die Testschritte nach dem Fehlereintritt nicht mehr berücksichtigt werden.<br>Zudem ist es möglich, das ein Testdatum doppelt in der Testdaten-Datei vorhanden ist.
+
+## Durchführunsdauer
+<div class = "TimeStamp" > (22.04.2020 - 05:32:47) </div>
+
+
+Der Testlauf wurde beendet. Im folgenden die Testabschlussinformationen sowie die Testdurchführungsdauer.
+
+ | Beschreibung | Wert |
+ | --- | --- |
+ | Start Zeit | 22.04.2020 - 05:30:05 |
+ | Ende Zeit | 22.04.2020 - 05:32:47 |
+ | Testdauer(gerundet) | 2 Minuten 42 Sekunden |
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style><script src="file:/C:/Users/mstoelting/Documents/Programmierung/Python/E(1)/Markdeep/markdeep.min.js?" charset="utf-8"></script>

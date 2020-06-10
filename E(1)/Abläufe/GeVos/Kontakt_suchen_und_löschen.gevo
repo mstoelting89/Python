@@ -1,0 +1,20 @@
+Gevo Kontakt_suchen_und_löschen
+Dieser GeVo beschreibt die Aktionen Suchen und löschen eines Partners auf Basis eine vorab ermittelteten Kontaktnummer. Vor der Löschung wird geprüft ob der gewünschte Partner geöffnet wurde
+Unitop-9
+
+
+---!> Kontakte öffnen
+GeVo;Kontakt_suchen_und_öffnen;;;
+---!> Partner löschen
+Steuerung;Element_Klicken;xpath;//div[@id='Ribbon']//span[text() = 'Löschen' and not(@aria-hidden)];
+Steuerung;Element_enthält_Wert_prüfen;xpath;//div[@id='contentBox']//div[@class='dialog-title']//p;[var:Kontaktnr:]
+Steuerung;Element_enthält_Wert_prüfen;xpath;//div[@id='contentBox']//div[@class='dialog-title']//p;löschen
+Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//button[@title='Ja'];
+---!> Warten bis die Maske aktualisiert wurde
+---!> Steuerung;Element_enthält_Wert_nicht;xpath;//div[@id='contentBox']//div[@class='dialog-title']//p;löschen
+---!> Feldprüfungen ablehnen
+Steuerung;Wartezeit_Timeout_Setzen;;;5
+---!> Steuerung;Element_enthält_Wert_prüfen;xpath;//div[@id='contentBox']//div[@class='dialog-title']//p;Feldprüfungen;Optional
+Steuerung;Element_enthält_Wert_nicht;xpath;//div[@id='contentBox']//div[@class='dialog-title']//p;Fehler
+Steuerung;Wartezeit_Timeout_Setzen;;;Default
+---!> Steuerung;Element_Klicken;xpath;//div[@id='contentBox']//button[@title='Nein'];;Optional

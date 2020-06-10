@@ -1,0 +1,9 @@
+Adressbeziehung anlegen
+Dieser Testfall führt die Anlage einer Adressbeziehung zwischen zwei Partnern auf Basis von hinterlegten Testdaten durch
+UNITOP-27;UNITOP-29;UNITOP-31;UNITOP-32;UNITOP-33
+
+
+---!>Setzen der Testvariablen "Kontaktnr" mit dem Wert aus den Testdaten, damit der GeVo "Kontakt_suchen_und_öffnen" verwendet werden kann
+Steuerung;Variable_setzen;variable;[@@Kontaktnr. Von@@];[var:Kontaktnr:]
+GeVo;Kontakt_suchen_und_öffnen;;;
+GeVo;/Adressbeziehung/Adressbeziehung_anlegen;;;
