@@ -1,0 +1,18 @@
+2020-06-26 16:47:10.570544: Webdriver wurde initialisiert
+2020-06-26 16:47:12.943063: Webseite übergeben: https://www.freelance.de
+2020-06-26 16:47:13.063153: Das Element '__search_freetext' wird auf den Wert 'Tester' gesetzt.
+2020-06-26 16:47:13.803896: Der Suchbutton wurde erfolgreich geklickt
+2020-06-26 16:47:13.803896: ------ Seite 1 wird  anaylsiert ------
+2020-06-26 16:47:16.479440: Die Seite Ephesus-Softwaretest:Senior-Tester,AgileSenior-Tester wurde erfolgreich aufgerufen
+2020-06-26 16:47:25.447381: ----Seite 2 wird analysiert ----
+2020-06-26 16:47:28.059160: Die Seite AgileSeniorTester(m/w/d) wurde erfolgreich aufgerufen
+2020-06-26 16:47:37.051512: ----Seite 3 wird analysiert ----
+2020-06-26 16:47:39.725004: Die Seite eCATTTester(m/w/d)inBornheim wurde erfolgreich aufgerufen
+2020-06-26 16:47:48.777351: ----Seite 4 wird analysiert ----
+2020-06-26 16:47:51.414757: Die Seite Projekt:TesterinNürnberg wurde erfolgreich aufgerufen
+2020-06-26 16:47:51.563291: Es konnte kein Webelement(3) in der Tabelle gefunden werden: list index out of range
+2020-06-26 16:48:00.359909: ----Seite 5 wird analysiert ----
+2020-06-26 16:48:02.953450: Die Seite Ephesus-Softwaretest:ReleaseManager(Lead) wurde erfolgreich aufgerufen
+2020-06-26 16:48:12.198828: ----Seite 6 wird analysiert ----
+2020-06-26 16:48:14.908251: Die Seite TechnicalBusinessAnalystEDISONProject(m/f/d) wurde erfolgreich aufgerufen
+2020-06-26 16:48:25.629874: Die Seite wurde geschlossen

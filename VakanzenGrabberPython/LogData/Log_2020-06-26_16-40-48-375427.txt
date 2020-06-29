@@ -1,0 +1,21 @@
+2020-06-26 16:40:50.584215: Webdriver wurde initialisiert
+2020-06-26 16:40:52.673818: Webseite übergeben: https://www.freelance.de
+2020-06-26 16:40:52.787344: Das Element '__search_freetext' wird auf den Wert 'Tester' gesetzt.
+2020-06-26 16:40:53.514786: Der Suchbutton wurde erfolgreich geklickt
+2020-06-26 16:40:53.514786: ------ Seite 1 wird  anaylsiert ------
+2020-06-26 16:40:56.127554: Die Seite Ephesus-Softwaretest:Senior-Tester,AgileSenior-Tester wurde erfolgreich aufgerufen
+2020-06-26 16:41:05.081333: ----Seite 2 wird analysiert ----
+2020-06-26 16:41:07.840516: Die Seite AgileSeniorTester(m/w/d) wurde erfolgreich aufgerufen
+2020-06-26 16:41:16.867627: ----Seite 3 wird analysiert ----
+2020-06-26 16:41:19.561481: Die Seite eCATTTester(m/w/d)inBornheim wurde erfolgreich aufgerufen
+2020-06-26 16:41:28.654204: ----Seite 4 wird analysiert ----
+2020-06-26 16:41:31.467287: Die Seite Projekt:TesterinNürnberg wurde erfolgreich aufgerufen
+2020-06-26 16:41:31.624914: Es konnte kein Webelement(3) in der Tabelle gefunden werden: list index out of range
+2020-06-26 16:41:40.429292: ----Seite 5 wird analysiert ----
+2020-06-26 16:41:43.050668: Die Seite Ephesus-Softwaretest:ReleaseManager(Lead) wurde erfolgreich aufgerufen
+2020-06-26 16:41:51.612408: ----Seite 6 wird analysiert ----
+2020-06-26 16:41:54.782258: Beim klicken des Elementes '' ist ein Fehler aufgetreten: Message: element click intercepted: Element <a href="/Projekte/Projekt-809819-Ephesus_Softwaretest_Release_Manager_(Lead)/highlight=tester" id="project_link_809819">...</a> is not clickable at point (692, 12). Other element would receive the click: <div class="alert-success panel-body" style="border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">...</div>
+  (Session info: chrome=83.0.4103.116)
+
+2020-06-26 16:41:54.782258: Beim klicken der Suchposition ist ein Fehler aufgetreten
+2020-06-26 16:42:05.303430: Die Seite wurde geschlossen

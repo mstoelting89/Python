@@ -1,0 +1,16 @@
+2020-06-19 16:34:13.081146: Webdriver wurde initialisiert
+2020-06-19 16:34:15.949465: Webseite übergeben: https://www.freelance.de
+2020-06-19 16:34:16.086534: Das Element '__search_freetext' wird auf den Wert 'Test Manager' gesetzt.
+2020-06-19 16:34:17.175521: Der Suchbutton wurde erfolgreich geklickt
+2020-06-19 16:34:17.175521: ------ Seite 1 wird  anaylsiert ------
+2020-06-19 16:34:19.952970: Die Seite SAPTest-undReleaseManager/in(m/w/d)Energie wurde erfolgreich aufgerufen
+2020-06-19 16:34:29.089193: ----Seite 2 wird analysiert ----
+2020-06-19 16:34:31.941418: Die Seite Testmanager(m/w/d)ASAPfüreinlangfristigesProjektinEssen wurde erfolgreich aufgerufen
+2020-06-19 16:34:41.114018: ----Seite 3 wird analysiert ----
+2020-06-19 16:34:44.129159: Die Seite TechnicalRolloutManager wurde erfolgreich aufgerufen
+2020-06-19 16:34:53.284071: ----Seite 4 wird analysiert ----
+2020-06-19 16:34:56.339764: Die Seite ProjektinNürnberg:Tester(m/w/d)gesucht wurde erfolgreich aufgerufen
+2020-06-19 16:34:56.463862: Es konnte kein Webelement(3) in der Tabelle gefunden werden: list index out of range
+2020-06-19 16:35:05.170298: ----Seite 5 wird analysiert ----
+2020-06-19 16:35:07.968313: Die Seite SeniorSAPTester/Testmanager-8Monate-Remote/München wurde erfolgreich aufgerufen
+2020-06-19 16:35:18.513785: Die Seite wurde geschlossen

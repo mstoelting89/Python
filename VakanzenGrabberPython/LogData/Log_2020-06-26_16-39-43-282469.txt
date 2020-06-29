@@ -1,0 +1,17 @@
+2020-06-26 16:39:45.584627: Webdriver wurde initialisiert
+2020-06-26 16:39:47.697208: Webseite übergeben: https://www.freelance.de
+2020-06-26 16:39:47.848669: Das Element '__search_freetext' wird auf den Wert 'Test Manager' gesetzt.
+2020-06-26 16:39:48.494514: Der Suchbutton wurde erfolgreich geklickt
+2020-06-26 16:39:48.494514: ------ Seite 1 wird  anaylsiert ------
+2020-06-26 16:39:51.107170: Die Seite SAPTest-undReleaseManager/in(m/w/d)Energie wurde erfolgreich aufgerufen
+2020-06-26 16:40:00.144393: ----Seite 2 wird analysiert ----
+2020-06-26 16:40:02.790406: Die Seite LeadTestEngineer wurde erfolgreich aufgerufen
+2020-06-26 16:40:02.935460: Es konnte kein Webelement(3) in der Tabelle gefunden werden: list index out of range
+2020-06-26 16:40:11.706488: ----Seite 3 wird analysiert ----
+2020-06-26 16:40:14.388695: Die Seite ConfigurationManager(Ref.146509) wurde erfolgreich aufgerufen
+2020-06-26 16:40:14.515539: Es konnte kein Webelement(3) in der Tabelle gefunden werden: list index out of range
+2020-06-26 16:40:23.395003: ----Seite 4 wird analysiert ----
+2020-06-26 16:40:26.097375: Die Seite Tester(m/w)BereichSoftwareentwicklung wurde erfolgreich aufgerufen
+2020-06-26 16:40:34.997523: ----Seite 5 wird analysiert ----
+2020-06-26 16:40:37.708864: Die Seite FrontArenaEntwicklersoiweTester-Frankfurt wurde erfolgreich aufgerufen
+2020-06-26 16:40:48.363858: Die Seite wurde geschlossen

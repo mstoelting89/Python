@@ -13,6 +13,15 @@ include('header.php');
 			<button><a href='https://www.whocando.eu/#aboutUs'>Über uns</a></button>
 			<div class='profilLogin'>
 				<?php 
+					//****************************************************************
+					//
+					// Abfrage ob die SessionID gesetzt ist. 
+					//
+					//****************************************************************
+					
+					//****************************************************************
+					// Wenn ja, werden die Userdaten aus der Datenbank geladen
+					//****************************************************************
     				if(isset($userID)) {
     				        echo "<img src='https://www.whocando.eu/".$userPicture[$userID]."'>";
     				   echo "<div class='profilName'>";
@@ -37,6 +46,10 @@ include('header.php');
     				            echo "</td></tr>";
     				       echo "</table>";
     				   echo "</div>";
+					   
+					//****************************************************************
+					// Wenn nicht, werden Einlogmöglichkeiten zur Verfügung gestellt
+					//****************************************************************
     				} else {
     				    echo "<div class='loginField'>";
     				        echo "Login";
@@ -83,9 +96,12 @@ include('header.php');
 		<!--  Header -->
 		
 		<?php 
-		  $abfrageUnis = new dbQuery("SELECT ID, name, bundesland FROM db764570417.universitydata");
-		  $unis = $abfrageUnis->fetchData('ID', 'name');
-		  $uniBundesland = $abfrageUnis->fetchData('ID', 'bundesland');
+			//****************************************************************
+			// Datenbankabfrage alles Unis für das Autofill-Dropdown Menü
+			//****************************************************************
+			$abfrageUnis = new dbQuery("SELECT ID, name, bundesland FROM db764570417.universitydata");
+			$unis = $abfrageUnis->fetchData('ID', 'name');
+			$uniBundesland = $abfrageUnis->fetchData('ID', 'bundesland');
 		?>
 		
 		<div class='header'> <!--  

@@ -1,0 +1,2 @@
+2020-06-19 16:12:33.368659: Webdriver wurde initialisiert
+2020-06-19 16:12:35.844046: Webseite übergeben: https://www.freelance.de

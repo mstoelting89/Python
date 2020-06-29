@@ -1,0 +1,5 @@
+2020-06-26 16:36:50.969833: Webdriver wurde initialisiert
+2020-06-26 16:36:50.976367: Beim Aufrufen der Website ['https://www.freelance.de'] ist ein Fehler aufgetreten: Message: invalid argument
+  (Session info: chrome=83.0.4103.116)
+
+2020-06-26 16:36:50.976367: Der Seitentitel '['Projekte und Aufträge für Freelancer, Freiberufler und Selbstständige']' stimmt nicht mit dem Originalseitentilt '' überein

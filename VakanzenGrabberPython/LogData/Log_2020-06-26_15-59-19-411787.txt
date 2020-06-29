@@ -1,0 +1,5 @@
+2020-06-26 15:59:21.696176: Webdriver wurde initialisiert
+2020-06-26 15:59:21.706144: Beim Aufrufen der Website None ist ein Fehler aufgetreten: Message: invalid argument: 'url' must be a string
+  (Session info: chrome=83.0.4103.116)
+
+2020-06-26 15:59:21.717113: Der Seitentitel 'Projekte und Aufträge für Freelancer, Freiberufler und Selbstständige' stimmt nicht mit dem Originalseitentilt '' überein

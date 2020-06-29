@@ -1,0 +1,3 @@
+2020-06-26 15:33:05.220500: Webdriver wurde initialisiert
+2020-06-26 15:33:05.221497: Beim Aufrufen der Website text:'https://www.freelance.de' ist ein Fehler aufgetreten: Object of type Cell is not JSON serializable
+2020-06-26 15:33:05.233464: Der Seitentitel 'Projekte und Aufträge für Freelancer, Freiberufler und Selbstständige' stimmt nicht mit dem Originalseitentilt '' überein
