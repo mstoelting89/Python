@@ -1,0 +1,20 @@
+2020-07-03 15:18:28.934051: Webdriver wurde initialisiert
+2020-07-03 15:18:31.666921: Webseite übergeben: https://www.freelance.de
+2020-07-03 15:18:32.047447: Das Element '__search_freetext' wird auf den Wert 'Test Manager' gesetzt.
+2020-07-03 15:18:32.869710: Der Suchbutton wurde erfolgreich geklickt
+2020-07-03 15:18:32.869710: ------ Seite 1 wird  anaylsiert ------
+2020-07-03 15:18:35.659010: Die Seite SAPTest-undReleaseManager/in(m/w/d)Energie wurde erfolgreich aufgerufen
+2020-07-03 15:18:42.016410: Die Seite SAPeCATTTestentwickler,Bornheim,6Monate+ wurde erfolgreich aufgerufen
+2020-07-03 15:18:51.443843: ----Seite 2 wird analysiert ----
+2020-07-03 15:18:54.419100: Die Seite TestConsultant(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:19:00.756178: Die Seite LeadTestEngineer(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:19:09.945171: ----Seite 3 wird analysiert ----
+2020-07-03 15:19:12.877556: Die Seite SAPBWApplicationService/OperationsManager(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:19:19.860209: Die Seite Strategieberater-QAManager(m/w/d)REMOTE wurde erfolgreich aufgerufen
+2020-07-03 15:19:29.254870: ----Seite 4 wird analysiert ----
+2020-07-03 15:19:32.212140: Die Seite AgileTester(m/f/d) wurde erfolgreich aufgerufen
+2020-07-03 15:19:38.900333: Die Seite Tester(m/w)BereichSoftwareentwicklung wurde erfolgreich aufgerufen
+2020-07-03 15:19:48.240477: ----Seite 5 wird analysiert ----
+2020-07-03 15:19:51.235488: Die Seite Ref.Nr:227037-Entwickler(m/w/d)SSIS/SQL/Cognos wurde erfolgreich aufgerufen
+2020-07-03 15:19:57.565188: Die Seite FrontArenaEntwicklungsexperte(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:20:08.381062: Die Seite wurde geschlossen

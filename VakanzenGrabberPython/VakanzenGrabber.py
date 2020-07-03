@@ -45,13 +45,8 @@ class VakanzenGrabber():
         ##############################
         # CSV Datei wird geöffnet
         ##############################
-        #resultName = "Results/Titel_" + str(datetime.datetime.now())
         resultName = "Results/Ausgabe"
-        #resultName = resultName.replace(":","-")
-        #resultName = resultName.replace(".","-")
-        #resultName = resultName.replace(" ","_")
         self.result = csvData.CSV_Daten(resultName)
-        #self.result.csvSchreiben(["Titel","Beginn","Ende","Standort","Preis","Remotearbeit","Letztes Update","Referenz"])
 
     ############################################################
     #   Funktion definiert die verschiedenen Möglichkeiten zum
@@ -335,8 +330,8 @@ class VakanzenGrabber():
             # Nach 1 Durchläufen wird
             # abgebrochen
             ##############################
-            if i == 1:
-                break
+            #if i == 2:
+            #    break
 
         ##############################
         # 5 sec Warten

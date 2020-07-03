@@ -3,9 +3,7 @@
 #   Klasse zum Laden der Daten aus einem Datentreiber
 #
 ##############################################################################################################################################
-import pandas as pd
 import xlrd
-import numpy as np
 
 class datentreiber():
 
@@ -29,5 +27,7 @@ class datentreiber():
             data.append(sheet.cell(i, int(spalte)).value)
 
         return data
+
+
 
 

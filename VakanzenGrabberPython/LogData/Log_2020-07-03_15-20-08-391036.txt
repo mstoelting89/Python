@@ -1,0 +1,24 @@
+2020-07-03 15:20:10.585816: Webdriver wurde initialisiert
+2020-07-03 15:20:13.436275: Webseite übergeben: https://www.freelance.de
+2020-07-03 15:20:13.707842: Das Element '__search_freetext' wird auf den Wert 'Tester' gesetzt.
+2020-07-03 15:20:14.609652: Der Suchbutton wurde erfolgreich geklickt
+2020-07-03 15:20:14.610647: ------ Seite 1 wird  anaylsiert ------
+2020-07-03 15:20:17.782713: Die Seite Ephesus-Softwaretest:Senior-Tester,AgileSenior-Tester wurde erfolgreich aufgerufen
+2020-07-03 15:20:24.069547: Die Seite Ref.Nr:226988-SeniorSoftware-TesterEntwicklung(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:20:24.208712: Es konnte kein Webelement(3) in der Tabelle gefunden werden: list index out of range
+2020-07-03 15:20:33.372459: ----Seite 2 wird analysiert ----
+2020-07-03 15:20:36.264731: Die Seite FachlicherTester(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:20:42.516142: Die Seite Tester/Analyst/POSY-Experte–abJulibisEnde2020–Köln/Remote wurde erfolgreich aufgerufen
+2020-07-03 15:20:51.812643: ----Seite 3 wird analysiert ----
+2020-07-03 15:20:54.700160: Die Seite SystemBenchTester(m/w/d),RaumAschaffenburg(ID:8594) wurde erfolgreich aufgerufen
+2020-07-03 15:21:01.021646: Die Seite FrontArenaTester(m/w/d) wurde erfolgreich aufgerufen
+2020-07-03 15:21:10.386726: ----Seite 4 wird analysiert ----
+2020-07-03 15:21:13.392258: Die Seite SeniorSAPTester/Testmanager-8Monate-Remote/München-StartApril wurde erfolgreich aufgerufen
+2020-07-03 15:21:19.858889: Die Seite SeniorSAPTester/Testmanager-8Monate-Remote/München wurde erfolgreich aufgerufen
+2020-07-03 15:21:29.261251: ----Seite 5 wird analysiert ----
+2020-07-03 15:21:31.974983: Die Seite SAPTest-undReleaseManager/in(m/w/d)Energie wurde erfolgreich aufgerufen
+2020-07-03 15:21:38.241767: Die Seite Testanalyst(m/w/d)End-to-EndTests wurde erfolgreich aufgerufen
+2020-07-03 15:21:47.484708: ----Seite 6 wird analysiert ----
+2020-07-03 15:21:50.357334: Die Seite Ephesus-Webtechnologien:WebtechologienEntwickler wurde erfolgreich aufgerufen
+2020-07-03 15:21:57.189478: Die Seite TechnicalBusinessAnalystEDISONProject(m/f/d) wurde erfolgreich aufgerufen
+2020-07-03 15:22:08.069171: Die Seite wurde geschlossen
