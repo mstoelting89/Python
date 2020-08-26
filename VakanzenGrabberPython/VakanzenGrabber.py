@@ -5,9 +5,6 @@ import csvData
 import datetime
 import logData
 
-# ToDo 1. Speicherung der Titel in einer .csv Datei - Hierfür extra Klasse erstellen
-# ToDo 2. Speicherung der LogDaten in einer LogDatei - Hierfür extra Klasse erstellen
-
 ##############################################################################################################################################
 #
 #   Klasse zum Durchlaufen der Webseite von Freelance.de und suchen nach bestimmten Suchbegriffen
